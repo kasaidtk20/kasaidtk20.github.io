@@ -140,6 +140,9 @@ a:active{
     font-size: 12vw;
     line-height: 15vw;
     margin: 0;
+}
+
+h1 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -480,3 +483,4 @@ a:active{
     margin: 1% 0 0 0;
 
 }
+
