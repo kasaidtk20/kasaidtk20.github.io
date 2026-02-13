@@ -1,414 +1,278 @@
 <!DOCTYPE html>
 <html lang="ja">
+<!-- devtoolを覗く習慣のある貴方は多分電通研に向いている! -->
+<!-- 是非加入してこのページとコードを修正して頂きたい... -->
 
-    <head>
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TNV48H6M0J"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<head>
+    <meta charset="utf-8">
+    <!-- Google tag (gtag.js) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <!-- サムネイル画像 -->
+    <meta property="og:image" content="picture/サムネイル.png">
+    <!-- サイトタイトル・説明 -->
+    <title>関西大学 電気通信工学研究会</title>
+    <meta name="description" content="関西大学理系サークル電気通信工学研究会の公式webサイト。電気通信工学研究会での活動、制作物、イベント等について紹介しています。">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- slick css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Noto+Sans+JP:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@4.1.1/dist/css/yakuhanjp.css">
+    <script>
 
-  gtag('config', 'G-TNV48H6M0J');
-</script>
-        <meta charset="utf-8">
-        <meta name="description" content="関西大学理系サークル電気通信工学研究会の公式webサイト。電気通信工学研究会での活動、制作物、イベント等について紹介しています。">
-        <meta name="viewport" content="wideth=device-width,initial-scale=1,user-scalable=no,minimum-scale=1,minimum-scale=1">
-        <meta property="og:image" content="picture/サムネイル.png">
-        <link rel="stylesheet" href="style.css">
-        <title>関西大学 電気通信工学研究会</title>
-    </head>
+    </script>
+</head>
 
-    <body>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript>
-            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPPB6TJQ"height="0" width="0" style="display:none;visibility:hidden"></iframe>
-        </noscript>
-    <!-- End Google Tag Manager (noscript) -->
-        <div>
-            <header class="DTK_header">
-                <h1 class="header_h1">
-                    電気通信工学研究会
-                </h1>
-            </header>
-        </div>
-        <div>
-            <div class="main_div">
-                <div class="head_img_frame">
-                    <img class="img_01" src="picture/20kaigishitsu.jpg">
-                    <img class="img_02" src="picture/gassyuku.jpg">
-                    <img class="img_03" src="picture/Tsukuba.jpg">
+<body>
+    <div class="loaderbg">
+        <div class="loader"></div>
+    </div>
+    <div class="window_wrapper">
+        <div class="header">
+            <a href="#top">
+                <div class="header_in">
+                    <div class="header-logo"><img src="picture/ツイッターアイコン2023.png"></div>
+                    <div>
+                        <div class="header-lit">関西大学</div>
+                        <div class="header-big">電気通信工学研究会</div>
+                    </div>
                 </div>
-
-                <div class="main_text">
-                    <!--制作物-->
-                    <section>
-                        <h1 class="title_h1">
-                            Makes!!
-                        </h1>
-                        <div class="contents_div">
-                            <h1 class="rogos_h1">
-                                GAME
-                            </h1>
-                            <ul class="contents_ul">
-                                <li class="contents_li">
-                                    <a href="https://unityroom.com/games/osyougatuufo">
-                                        <div class="make_img_div">
-                                            <img class="make_img" src="picture/torenaikyattya-.png">
-                                        </div>
-                                        <p class="make_p">
-                                            とれないUFOキャッチャー
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="contents_li">
-                                    <a href="https://unityroom.com/games/dtkgikogikohasimasen">
-                                        <div class="make_img_div">
-                                            <img class="make_img" src="picture/gikogiko.png">
-                                        </div>
-                                        <p class="make_p">
-                                            ギコギコはしません、スーーッ
-                                        </p>
-                                    </a>
-                                </li>
-                                <li class="contents_li">
-                                    <a href="https://unityroom.com/games/dtksuisou">
-                                        <div class="make_img_div">
-                                            <img class="make_img" src="picture/suisou.png">
-                                        </div>
-                                        <p class="make_p">
-                                            すいそう
-                                        </p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h1 class="rogos_h1">
-                                MODELING
-                            </h1>
-                            <ul class="contents_ul">
-                                <li class="contents_li contents_video">
-                                    <div>
-                                        <div class="make_img_div">
-                                            <video class="make_img" src="video/owl.mp4" autoplay playsinline controls loop>
-                                                <p>
-                                                    お使いのブラウザは動画を閲覧できません。
-                                                </p>
-                                            </video>
-                                        </div>
-                                        <p class="make_p">
-                                            気怠げなフクロウ
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="contents_li contents_video">
-                                    <div>
-                                        <div class="make_video_div">
-                                            <video class="make_img" src="video/tatsuya.mp4" autoplay playsinline controls loop>
-                                                <p>
-                                                    お使いのブラウザは動画を閲覧できません。
-                                                </p>
-                                            </video>
-                                        </div>
-                                        <p class="make_p">
-                                            ふりおらたつや
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="contents_li contents_video">
-                                    <div>
-                                        <div class="make_img_div">
-                                            <video class="make_img" src="video/クリスマス.mp4" autoplay playsinline controls loop>
-                                                <p>
-                                                    お使いのブラウザは動画を閲覧できません。
-                                                </p>
-                                            </video>
-                                        </div>
-                                        <p class="make_p">
-                                            クリスマス
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="contents_div">
-                            <h1 class="rogos_h1">
-                                HARDWARE
-                            </h1>
-                            <ul class="contents_ul">
-                                <li class="contents_li contents_video">
-                                    <div>
-                                        <div class="make_video_div">
-                                            <video class="make_img" src="video/高速回転除夜の鐘.mp4" autoplay playsinline controls loop muted>
-                                                <p>
-                                                    お使いのブラウザは動画を閲覧できません。
-                                                </p>
-                                            </video>
-                                        </div>
-                                        <p class="make_p">
-                                            高速回転除夜の鐘
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="contents_li contents_video">
-                                    <div>
-                                        <div class="make_video_div">
-                                            <video class="make_img" src="video/電光掲示板.mp4" autoplay playsinline controls loop muted>
-                                                <p>
-                                                    お使いのブラウザは動画を閲覧できません。
-                                                </p>
-                                            </video>
-                                        </div>
-                                        <p class="make_p">
-                                            電光掲示板
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="contents_li contents_video">
-                                    <div>
-                                        <div class="make_video_div">
-                                            <video class="make_img" src="video/ラジコン.mp4" autoplay playsinline controls loop muted>
-                                                <p>
-                                                    お使いのブラウザは動画を閲覧できません。
-                                                </p>
-                                            </video>
-                                        </div>
-                                        <p class="make_p">
-                                            ラジコン
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <!--活動-->
-                    <section class="activity_section">
-                        <h1 class="title_h1">
-                            Activity!!
-                        </h1>
-                        <div class="activity_a activity_div_top">
-                            <img class="activity_img" src="picture/catchrobot_1.jpg">
-                            <div class="activity_div">
-                                <div class="activity_text">
-                                    <p class="activity_title">
-                                        ロボット製作を一緒に
-                                    </p>
-                                    <h1 class="activity_h1">
-                                        キャチロボバトルコンテスト
-                                    </h1>
-                                    <p class="activity_p">
-                                        ものをつかむといったマテリアルハンドリング技術 (マテハン)に特化したユニークなロボットコンテストです。
-                                        授業やサークル活動で学んだことを活用してロボットを製作し、技術を磨いていきます。<br>
-                                        電通研ではロボットをつくるのが初めての方も参加しており、第14回大会はベスト16に入ることが出来ました。<br>
-                                        新たな発見や考え方、面白い発想に出会える非常に興味深い大会です。
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="activity_a">
-                            <img class="activity_img" src="picture/MF.jpg">
-                            <div class="activity_div">
-                                <div  class="activity_text">
-                                    <p class="activity_title">
-                                        「メイカー（Maker）」の祭典
-                                    </p>
-                                    <h1 class="activity_h1">
-                                        MakerFaire KYOTO/TOKYO
-                                    </h1>
-                                    <p class="activity_p">
-                                        誰でも使えるようになった新しいテクノロジーを中心に、
-                                        ユニークな発想で以て、一人ひとりが本当に欲しいものを作り上げる「メイカー（Maker）」のお祭り、
-                                        Maker Faireに参加しました。<br>
-                                        電通研メンバーそれぞれが、3Dアクションゲームや高速回転除夜の鐘など各々のユニークな作品を展示しました。<br>
-                                        多くの方々からフィードバック頂けたのは、大変貴重な経験となりました。
-                                    </p>
-                                </div>                                
-                            </div>
-                        </div>
-                        <div class="activity_a activity_div_bottom">
-                            <img class="activity_img" src="picture/KC3.jpg">
-                            <div class="activity_div">
-                                <div class="activity_text">
-                                    <p class="activity_title">
-                                        他大学との交流と新たな発見
-                                    </p>
-                                    <h1 class="activity_h1">
-                                        KC3
-                                    </h1>
-                                    <p class="activity_p">
-                                        KC3（関西情報系学生団体交流会）は、
-                                        関西圏大学のコンピュータ系サークルに所属する学生を対象にイベントを開催する団体です。<br>
-                                        勉強会やハッカソンといったイベントに参加させていただいております。
-                                        また、他大学との交流の場にもなっており、新たな知り合いや知識が得られます。
-                                    </p>
-                                </div>                                
-                            </div>
-                        </div>
-                    </section>
-
-                    <!--年間予定行事、イベント-->
-                    <section class="event_section">
-                        <h1 class="title_h1">
-                            Events!!
-                        </h1>
-                        <div class="event_div">
-                            <h1 class="event_h1">
-                                04
-                            </h1>
-                            <div class="event_text">
-                                新歓
-                            </div>
-                        </div>
-                        <div class="event_div">
-                            <h1 class="event_h1">
-                                05
-                            </h1>
-                            <div class="event_text">
-                                講習会
-                            </div>
-                        </div>
-                        <div class="event_div">
-                            <h1 class="event_h1">
-                                06
-                            </h1>
-                            <div class="event_text">
-                                ハッカソン
-                            </div>
-                        </div>
-                        <div class="event_div">
-                            <h1 class="event_h1">
-                                07
-                            </h1>
-                            <div class="event_text">
-                                技術勉強
-                            </div>
-                        </div>
-                        <div class="event_div">
-                            <h1 class="event_h1">
-                                08
-                            </h1>
-                            <div class="event_text">
-                                OBOG BBQ
-                            </div>
-                        </div>
-                        <div class="event_div">
-                            <h1 class="event_h1">
-                                09
-                            </h1>
-                            <div class="event_text">
-                                学園祭準備
-                            </div>
-                        </div>
-                        <div class="event_div">
-                            <h1 class="event_h1">
-                                10
-                            </h1>
-                            <div class="event_text">
-                                学園祭準備
-                            </div>
-                        </div>
-                        <div class="event_div">
-                            <h1 class="event_h1">
-                                11
-                            </h1>
-                            <div class="event_text">
-                                学園祭
-                            </div>
-                        </div>
-                        <div class="event_div">
-                            <h1 class="event_h1">
-                                12
-                            </h1>
-                            <div class="event_text">
-                                お正月ハッカソン
-                            </div>
-                        </div>
-                        <div class="event_div">
-                            <h1 class="event_h1">
-                                01
-                            </h1>
-                            <div class="event_text">
-                                お正月ハッカソン
-                            </div>
-                        </div>
-                        <div class="event_div">
-                            <h1 class="event_h1">
-                                02
-                            </h1>
-                            <div class="event_text">
-                                LT会
-                            </div>
-                        </div>
-                        <div class="event_div">
-                            <h1 class="event_h1">
-                                03
-                            </h1>
-                            <div class="event_text">
-                                合宿
-                            </div>
-                        </div>
-                        <div class="event_img_def">
-                            <div class="event_img_div">
-                                <div class="event_img_no">
-                                    <img class="event_img" src="picture/shinkann.jpg">
-                                </div>
-                            </div>
-                            <div class="event_img_div">
-                                <div class="event_img_no">
-                                    <img class="event_img" src="picture/DTK_PC.jpg">
-                                </div>
-                            </div>
-                            <div class="event_img_div">
-                                <div class="event_img_no">
-                                    <img class="event_img" src="picture/gakuensai_2024.jpg">
-                                </div>
-                            </div>
-                            <div class="event_img_div">
-                                <div class="event_img_no">
-                                    <img class="event_img" src="picture/gassyuku_2025.jpg">
-                                </div>
-                            </div>
-                        </div>
+            </a>
+        </div>
+        <div class="top" id="top">
+            <div class="top-message">
+                <div class="top-message-inside type"><span class="big-letter">君</span>も<span
+                        class="big-letter">電通研</span>で</div>
+                <div data-delay="350" class="top-message-inside type"><span class="big-letter">作</span>ってみない？</div>
+            </div>
+            <div class="top-slider">
+                <div><img src="picture/mf_tk_25.jpg"></div>
+                <div><img src="picture/catchrobot_1.jpg"></div>
+                <div><img src="picture/20kaigishitsu.jpg"></div>
+                <div><img src="picture/gassyuku.jpg"></div>
+            </div>
+            <div class="top-banner">
+                <a href="#welcome" style="z-index:10; display: block; position: relative;">
+                    <img src="picture/新歓バナー.webp" style="pointer-events: none;">
+                    <div class="arrow-circle"></div>
+                </a>
+            </div>
+        </div>
+        <div class="about">
+            <div class="about-box">
+                <div class="about-logo"><img src="picture/dtk_icon.jpg"></div>
+                <div class="about-message">
+                    <h2 class="about-message-title"><span class="type"><span
+                                class="type-tag type-func">printf</span><span
+                                class="type-tag type-bracket">(</span><span class="type-tag type-string">"</span><span
+                                class="type-string">ABOUT US</span><span class="type-tag type-string">"</span><span
+                                class="type-tag type-bracket">);</span></span></h2>
+                    <div>私たちは、関西大学<b>「電気通信工学研究会」</b>、</div>
+                    <div>通称<span class="big-letter">「電通研」</span>です！</div><br>
+                    <div><span class="background-linear">ゲームやロボット、アプリにAIまで！</span></div>
+                    <div>コンピュータに関する様々な<b>「モノづくり」</b>に</div>
+                    <div>楽しみながら取り組むサークルです。</div><br>
+                    <div><span class="big-letter">君も電通研で作ってみない？</span></div>
                 </div>
             </div>
-        </section>
-        <!--フッター-->
-        <section class="footer_section">
-            <div class="footer_img_pos" target="_blank">
-                <img class="footer_dtk_img" src="picture/ツイッターアイコン2023.png">
-                <ul class="footer_ul">
-                    <li class="footer_li">
+        </div>
+        <br>
+        <div class="works">
+            <div class="section-header">
+                <div class="bg-text">MAKE IT REAL</div>
+                <h2 class="header-title type">想像をカタチに</h2>
+            </div>
+            <div class="header-sub-text fade-up">
+                <span class="background-linear">未経験でも大丈夫</span><br>
+                <span class="background-linear">あなたの想像したものを<span class="pc-hidden"><br></span>電通研でカタチにしてみませんか？</span>
+            </div>
+            <!-- 作品リスト -->
+            <div class="center fade-up">
+                <!-- 作品を追加する場合は▼を下にコピペしてください
+                <div class="works-box">
+                    <div class="works-img"><img src="画像ファイル"></div>
+                    <div class="works-title">作品タイトル</div>
+                </div>
+                -->
+                <div class="works-box">
+                    <div class="works-img"><video src="video/高速回転除夜の鐘.mp4" autoplay loop muted
+                            playsinline>このブラウザでは再生できません。</video></div>
+                    <div class="works-title">高速回転除夜の鐘</div>
+                </div>
+                <div class="works-box">
+                    <div class="works-img"><video src="video/電光掲示板.mp4" autoplay loop muted
+                            playsinline>このブラウザでは再生できません。</video></div>
+                    <div class="works-title">電光掲示板</div>
+                </div>
+                <div class="works-box">
+                    <div class="works-img"><video src="video/ラジコン.mp4" autoplay loop muted
+                            playsinline>このブラウザでは再生できません。</video></div>
+                    <div class="works-title">ラジコン</div>
+                </div>
+                <div class="works-box">
+                    <div class="works-img"><video src="video/クリスマス.mp4" autoplay loop muted
+                            playsinline>このブラウザでは再生できません。</video></div>
+                    <div class="works-title">クリスマス</div>
+                </div>
+            </div>
+        </div>
+        <div class="activity">
+            <div class="section-header">
+                <div class="bg-text">ACTIVITIES</div>
+                <h2 class="header-title type">活動内容</h2>
+            </div>
+            <div class="header-sub-text fade-up">
+                <span class="background-linear">仲間と大会に出るも良し</span><br>
+                <span class="background-linear">ひとりでコツコツ取り組むも良し</span><br>
+                <span class="background-linear">あなたのペースと、あなたに合わせたスタイルで</span>
+            </div>
+            <!-- イベントリスト -->
+            <div class="activity-lists">
+                <!-- イベントを追加したい場合は▼を下にコピペしてください。色などは自動で調整されます。
+                <div class="activity-box fade-up">
+                    <div class="activity-title">イベントタイトル</div>
+                    <div class="activity-image"><img src="picture/画像名">(載せない場合はこのdiv要素ごと削除してください)</div>
+                    <div class="activity-desc">イベントの簡単な説明、紹介</div>
+                    <div class="modal-data">詳細の紹介(なくても良い)(載せない場合はこのdiv要素ごと削除してください)</div>
+                </div> 
+                -->
+                <div class="activity-box fade-up">
+                    <div class="activity-title">キャチロボバトルコンテスト</div>
+                    <div class="activity-image"><img src="picture/catchrobot_1.jpg"></div>
+                    <div class="activity-desc">「ものをつかむ」などのマテリアルハンドリング技術に特化したユニークなロボットコンテスト</div>
+                    <div class="modal-data">「ものをつかむ」などのマテリアルハンドリング技術に特化したユニークなロボットコンテストです。
+                        電通研ではロボットをつくるのが初めてのメンバーも参加しており、第14回大会はベスト16に入ることが出来ました。</div>
+                </div>
+                <div class="activity-box fade-up">
+                    <div class="activity-title">MakerFaire KYOTO/TOKYO</div>
+                    <div class="activity-image"><img src="picture/mf_tk_25.jpg"></div>
+                    <div class="activity-desc">ユニークな発想で、モノを作る「メイカー(Maker)」の祭典</div>
+                    <div class="modal-data">
+                        誰でも使えるようになった新しいテクノロジーを中心に、 ユニークな発想で、一人ひとりが本当に欲しいものを作り上げる「メイカー（Maker）」のお祭り、 Maker
+                        Faireに参加しています。<br>
+                        電通研メンバーが作ったユニークな作品を展示しました。多くの方々からフィードバック頂けたのは、大変貴重な経験となりました。
+                    </div>
+                </div>
+                <div class="activity-box fade-up">
+                    <div class="activity-title">KC3</div>
+                    <div class="activity-image"><img src="picture/KC3.jpg"></div>
+                    <div class="activity-desc">他大学との交流、新たな発見</div>
+                    <div class="modal-data">KC3（関西情報系学生団体交流会）は、 関西圏大学のコンピュータ系サークルに所属する学生を対象にイベントを開催する団体です。<br>
+                        勉強会やハッカソンといったイベントに参加させていただいております。 また、他大学との交流の場にもなっており、新たな知り合いや知識が得られます。</div>
+                </div>
+                <div class="activity-box fade-up">
+                    <div class="activity-title">学園祭</div>
+                    <div class="activity-image"><img src="picture/gakuensai_2024.jpg"></div>
+                    <div class="activity-desc">学内外の多くの人に作品を披露するチャンス</div>
+                    <div class="modal-data">
+                        電通研は毎年、関西大学の学園祭に出展しています。<br>
+                        活動の中で作ってきた様々な作品を展示したり、実際にプレイしてもらったり...<br>
+                        内外の学生さんや地域の方々など多くの方々に反応を頂けるのは、作品作りに苦労しただけに喜びもひとしおです。
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="welcome"
+            style="display:none; background-color: #FDCBF1;  width: 100%; scroll-margin-top: 10vh;  background-position: top right; background-blend-mode: lighten; background-image: url('picture/sakura.jpg');">
+            <div class="section-header">
+                <div class="bg-text" style="color: white;">JOIN DTK 2026!</div>
+                <h2 class="header-title" style="color:black;"></h2>
+            </div>
+            <div class="about-box" style="max-width: 1000px; margin: 10px auto;">イベント1</div>
+            <div class="about-box" style="max-width: 1000px; margin: 10px auto;">イベント2</div>
+            <div><a href="picture/新歓2026カレンダー.png">なんらかのバナーで「4月のイベントカレンダーを見る」</a></div>
+        </div>
+        <div class="section-header">
+            <div class="bg-text">CONTACT</div>
+            <h2 class="header-title type">アクセス・SNS</h2>
+        </div>
+        <div class="header-sub-text fade-up">
+            <span class="background-linear">新入生も、そうでなくても年中無休で大歓迎！</span><br>
+            <span class="background-linear">まずは気軽に連絡を！</span>
+        </div>
+        <div class="contact">
+            <div class="access fade-up">
+                <div class="contact-title">アクセス</div>
+                <div class="access-map"><iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d271.1512666989923!2d135.51140104008562!3d34.77505972472944!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e49685138fe3%3A0xd990774ba0e20b69!2z44CSNTY1LTA4NDIg5aSn6Ziq5bqc5ZC555Sw5biC5Y2D6YeM5bGx5p2x77yT5LiB55uu77yR77yQ4oiS77yT!5e0!3m2!1sja!2sjp!4v1768663585057!5m2!1sja!2sjp"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                <div class="access-detail"><span class="background-linear">関西大学 千里山キャンパス<br>誠之館 旧3号館 4階 20会議室</span>
+                </div>
+            </div>
+            <div class="sns fade-up">
+                <div class="contact-title">ソーシャルメディアアカウント</div>
+                <div class="sns-list">
+                    <div class="sns-icon">
                         <a class="footer_a" href="https://x.com/kuclubdtk" target="_blank">
-                            <div>
-                                <img class="footer_logo_img" src="picture/logo-black.png">
-                            </div>                            
+                            <img class="footer_logo_img" src="picture/logo-black.png">
                         </a>
-                    </li>
-                    <li class="footer_li">
-                        <a class="footer_a" href="https://youtube.com/channel/UCOgOnA8s-EwlfLQ5gLf2Zmg?si=h8hDVuQkwlIyW0zw" target="_blank">
-                            <img class="footer_logo_img" src="picture/youtube_social_icon_red.png">
+                    </div>
+                    <div class="sns-icon">
+                        <a class="footer_a" href="https://www.instagram.com/kuclubdtk" target="_blank">
+                            <img class="footer_logo_img" src="picture/Instagram_Glyph_Gradient.png">
                         </a>
-                    </li>
-                    <li class="footer_li">
+                    </div>
+                    <div class="sns-icon">
                         <a class="footer_a" href="https://t.co/mlr3FXvGYG" target="_blank">
                             <img class="footer_logo_img" src="picture/LINE_Brand_icon.png">
                         </a>
-                    </li>
-                </ul>
+                    </div>
+                    <div class="sns-icon">
+                        <a target="_blank" href="https://youtube.com/channel/UCOgOnA8s-EwlfLQ5gLf2Zmg">
+                            <img class="footer_logo_img" src="picture/youtube_social_icon_red.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-title">メールアドレス</div>
+                <div class="access-detail">kuclubdtk@gmail.com</div>
             </div>
-            <div class="footer_text">
-                <a href="https://maps.app.goo.gl/eSa6juqRwY1pZWup6" target="_blank">
-                    <p  class="footer_text_p">
-                        関西大学 誠之館 旧３号館 4階 20会議室
-                    </p>
-                </a>
-                <P class="footer_text_p">
-                    kuclubdtk@gmail.com
-                </P>
-            </div>
-        </section>
         </div>
-    </body>
+        <div class="footer">
+            <div class="footer-note">※本ページは当団体が自主的に制作・運営しているものです。<br>内容に関するお問い合わせは、当団体までお寄せください。</div>
+            <div><a href="https://kasaidtk20.github.io">&copy;電気通信工学研究会</a></div>
+        </div>
+    </div>
+    <!-- モーダル部分 -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div id="modal-body">
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mntn-dev/t.js/t.min.js"></script>
+    <!-- フルカレンダー(未使用)
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.20/index.global.min.js"></script>
+    -->
+    <script src="main.js"></script>
+    <script>
+        //ロード画面実装部分
+        $(function () {
+            $(window).on('load', function () {
+                $('.loader').delay(600).fadeOut(500);
+                $('.loaderbg').delay(900).fadeOut(600);
+            });
+            setTimeout(function () {
+                $('.loaderbg').fadeOut(600);
+            }, 4000);
+        });    
+    </script>
+</body>
+
 </html>
