@@ -27,6 +27,18 @@ a {
 
 /* 汎用クラス群 */
 
+.box {
+    background-color: #fff;
+    box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 20px 15px 30px 15px;
+    width: auto;
+    display: block;
+    max-width: 820px;
+    font-size: 17px;
+}
+
 /* PCで非表示用クラス */
 .pc-hidden {
     display: none;

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- devtoolを覗く習慣のある貴方は多分電通研に向いている! -->
+<!-- 是非加入してこのページとコードを修正して頂きたい... -->
+
+<head>
+    <meta charset="utf-8">
+    <!-- Google tag (gtag.js) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <!-- サムネイル画像 -->
+    <meta property="og:image" content="picture/サムネイル.png">
+    <link rel="icon" href="picture/dtk_icon.png" type="image/png">
+    <!-- サイトタイトル・説明 -->
+    <title>関西大学 電気通信工学研究会</title>
+    <meta name="description" content="関西大学理系サークル電気通信工学研究会の公式webサイト。電気通信工学研究会での活動、制作物、イベント等について紹介しています。">
+    <!-- css -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../picture/dtk_icon.png" type="image/png">
+    <!-- slick css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Noto+Sans+JP:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@4.1.1/dist/css/yakuhanjp.css">
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <div class="loaderbg">
+        <div class="loader"></div>
+    </div>
+    <div class="window_wrapper">
+        <div class="header">
+            <a href="https://kasaidtk20.github.io">
+                <div class="header_in">
+                    <div class="header-logo"><img src="../picture/ツイッターアイコン2023.png"></div>
+                    <div>
+                        <div class="header-lit">関西大学</div>
+                        <div class="header-big">電気通信工学研究会</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="section-header">
+            <div class="bg-text">ARCHIVES</div>
+            <h2 class="header-title type">Webサイトアーカイブ</h2>
+        </div>
+        <div class="header-sub-text fade-up">
+            <span class="background-linear">電通研が過去公開したWebサイト</span><br>
+        </div>
+        <br>
+        <div class="box fade-up">
+            <h3><a href="https://dtk-creativestudio.github.io/kudtk.github.io/index.html#dtktoha"  target="_blank">関西大学 電気通信工学研究会(旧サイト)</a></h3>
+            <div>電通研の旧サイト。公式キャラクターの「でん」と「つー」は要チェックです。</div>
+        </div>
+        <br>
+        <div class="box fade-up">
+            <h3><a href="http://kuclubdtk.hateblo.jp"  target="_blank">電気通信工学研究会公式ブログ</a></h3>
+            <div>電通研の公式ブログです。制作物紹介やノウハウの共有など。</div>
+        </div>
+        <br>
+        <div class="box fade-up">
+            <h3><a href="https://kudtk844412490.wordpress.com"  target="_blank">電気通信工学研究会 – Welcome to The DTK LAB !</a></h3>
+            <div>2020年,2021年は新型コロナウイルスの影響で学園祭がオンライン開催に。<br>その際に公開されたウェブサイトです。</div>
+        </div>
+        <br>
+        <div class="box fade-up">
+            <h3><a href="https://kasaidtk20.github.io/legacy/"  target="_blank">関西大学 電気通信工学研究会（旧デザイン）</a></h3>
+            <div>当ページ(https://kasaidtk20.github.io)の旧デザインになります。</div>
+        </div>
+        <div class="footer">
+            <div class="footer-note">※本ページは当団体が自主的に制作・運営しているものです。<br>内容に関するお問い合わせは、当団体までお寄せください。</div>
+            <div><a href="https://kasaidtk20.github.io">&copy;電気通信工学研究会</a></div>
+        </div>
+    </div>
+    <!-- モーダル部分 -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div id="modal-body">
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mntn-dev/t.js/t.min.js"></script>
+    <!-- フルカレンダー(未使用)
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.20/index.global.min.js"></script>
+    -->
+    <script src="main.js"></script>
+    <script>
+        //ロード画面実装部分
+        $(function () {
+            $(window).on('load', function () {
+                $('.loader').delay(600).fadeOut(500);
+                $('.loaderbg').delay(900).fadeOut(600);
+            });
+            setTimeout(function () {
+                $('.loaderbg').fadeOut(600);
+            }, 4000);
+        });    
+    </script>
+</body>
+
+</html>
