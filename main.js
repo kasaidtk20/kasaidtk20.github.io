@@ -166,7 +166,7 @@ function openActivityModal(element) {
     `;
 
     if ($img.length > 0) {
-        modalHtml += `<img src="${$img.attr('src')}" style="width:100%; border-radius:10px; margin-bottom:15px; height:auto; display:block;">`;
+        modalHtml += `<img src="${$img.attr('src')}" style="width:100%; border-radius:10px; max-height: 50vh; object-fit: cover; margin-bottom:15px; height:auto; display:block;">`;
     }
     modalHtml += `</div>`;
     modalHtml += `
