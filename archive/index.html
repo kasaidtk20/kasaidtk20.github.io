@@ -40,16 +40,28 @@
     </div>
     <div class="window_wrapper">
         <div class="header">
-            <a href="https://kasaidtk20.github.io">
-                <div class="header_in">
+            <div class="header_in">
+                <a href="https://kasaidtk20.github.io">
                     <div class="header-logo"><img src="../picture/ツイッターアイコン2023.png"></div>
                     <div>
                         <div class="header-lit">関西大学</div>
                         <div class="header-big">電気通信工学研究会</div>
                     </div>
+                </a>
+                <div class="menubar">
+                    <div class="menubar_button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
-            </a>
-        </div>
+            </div>
+            <div id="menubar_inner" class="menubar_inner">
+                <div class="menubar_inner_border"><a href="https://kasaidtk20.github.io">トップページ</a></div>
+                <div><a href="">サイトアーカイブ</a></div>
+            </div>
+            <div class="menu-overlay"></div>
+        </div>Ï
         <div class="section-header">
             <div class="bg-text">ARCHIVES</div>
             <h2 class="header-title type">サイトアーカイブ</h2>
@@ -112,6 +124,27 @@
                 $('.loaderbg').fadeOut(600);
             }, 4000);
         });    
+    </script>
+    <script>
+        //ハンバーガーメニュー実装部
+        $(function () {
+            $('.menubar').on('click', function (e) {
+                e.stopPropagation();
+                $('.menubar_inner').toggleClass("active_m");
+                $(".menu-overlay").toggleClass("active_m");
+                $(this).toggleClass("active_m");
+            });
+
+            $(document).on('click', function (e) {
+                if (!$(e.target).closest('.menubar_inner, .menubar').length) {
+                    if ($('.menubar_inner').hasClass("active_m")) {
+                        $('.menubar_inner').removeClass("active_m");
+                        $(".menu-overlay").removeClass("active_m");
+                        $('.menubar').removeClass("active_m");
+                    }
+                }
+            });
+        });
     </script>
 </body>
 
