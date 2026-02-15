@@ -469,6 +469,12 @@ a {
     .menubar {
         top: 1px;
         right: 0px;
+        background-color: inherit;
+        border: 2px solid #0070d1;
+    }
+
+    .menubar span{
+        background: #fff;
     }
 }
 
