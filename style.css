@@ -456,10 +456,6 @@ a {
         visibility: visible;
     }
 
-    .menubar.active_m {
-        border: 2px solid #000000;
-    }
-
     .header {
         width: 100%;
         top: 0px;
