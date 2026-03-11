@@ -563,7 +563,7 @@ a {
 
 /* ページトップバナー */
 .top-banner {
-    display: block;
+    display: none;
     position: absolute;
     bottom: 5px;
     right: 5px;
