@@ -1,0 +1,30 @@
+.search-box{
+    border: 1px solid #333;
+    max-width: fit-content;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+.search-box input{
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+.search-title{
+    font-size: 30px;
+}
+.search-word{
+    font-weight: bold;
+}
+
+.explain{
+    color: #666;
+}
+.dummy{
+    text-decoration: underline;
+    color: #333;
+}
