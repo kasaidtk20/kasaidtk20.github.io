@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
 </head>
+
 <body>
-    <div class="search-box"><span class="material-symbols-outlined" style="font-size: 20px;">search</span><input type="text" placeholder="サイト内を検索"></div>
-    <div class="search-title">「<span class="search-word">キーワード</span>」の検索結果</div>
-    <hr>
-    <div class="search-results">
-        <div><a href="nintendo.com">部員チャット「今月の目標について」</a></div>
-        <div class="explain">20XX/3/10 - 会長：今月の目標は「作品を完成させること」です！...そんな中で<b>キーワード</b>なんだよねぇ...</div>
-    </div>
-    <hr>
-    <div class="search-results">
-        <div><span class="dummy">部員チャット「こんな感じでダミーを足すとリアリティアップするかも」</span></div>
-        <div class="explain">20XX/1/10 - まぁ余裕があればでいいですけどね...そんな中で<b>キーワード</b>...</div>
-    </div>
+    <div class="search-box"><input type="text" placeholder="サイト内を検索" id="search-input"><button id="searchBtn"><span
+                class="material-symbols-outlined" style="font-size: 20px;">search</span></button></div>
+    <div class="search-title">「<span id="search-word"></span>」の検索結果</div>
+    <div id="results-field"></div>
+    <!-- jquery scripts q-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="search.js"></script>
+    <script>
+        $(document).ready(async function () {
+            searchWord = getParameterByName("search");
+            $("#search-word").text(searchWord);
+            $("#search-input").val(searchWord);
+            resultJson = await searchJsonByKeyword(searchWord);
+            var searchHtml = "";
+            if (!resultJson) {
+                $("#results-field").html("<div class='result-article'>検索結果が見つかりません...</div>");
+            } else {
+                var searchHtml = "";
+                searchHtml += "<div class='result-article'><div class='main'><a href='" + resultJson.main.link + "'>" + resultJson.main.title + "</a></div><div class='search-desc'>" + resultJson.main.date + " - " + resultJson.main.desc + "</div></div>";
+                $.each(resultJson.sub, function(index, val){
+                    searchHtml += "<div class = 'result-article'><div class='dummy'>" + val.title + "</div><div class='search-desc'>"  + val.date + " - " + val.desc +"</div></div>";
+                });
+                $("#results-field").html(searchHtml);
+            }
+        })
+    </script>
 </body>
+
 </html>

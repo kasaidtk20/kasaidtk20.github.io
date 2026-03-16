@@ -17,11 +17,16 @@
 .search-title{
     font-size: 30px;
 }
-.search-word{
+#search-word{
     font-weight: bold;
 }
 
-.explain{
+.result-article{
+    border-top: 1px solid #888;
+    padding: 5px 0;
+}
+
+.search-desc{
     color: #666;
 }
 .dummy{
