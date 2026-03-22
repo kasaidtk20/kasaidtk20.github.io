@@ -16,25 +16,65 @@
     <!-- jquery scripts q-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="search.js"></script>
+    <script src="/arg26/search.js"></script>
     <script>
         $(document).ready(async function () {
-            searchWord = getParameterByName("search");
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchWord = urlParams.get("search") || "";
+
             $("#search-word").text(searchWord);
             $("#search-input").val(searchWord);
-            resultJson = await searchJsonByKeyword(searchWord);
-            var searchHtml = "";
-            if (!resultJson) {
-                $("#results-field").html("<div class='result-article'>検索結果が見つかりません...</div>");
-            } else {
-                var searchHtml = "";
-                searchHtml += "<div class='result-article'><div class='main'><a href='" + resultJson.main.link + "'>" + resultJson.main.title + "</a></div><div class='search-desc'>" + resultJson.main.date + " - " + resultJson.main.desc + "</div></div>";
-                $.each(resultJson.sub, function(index, val){
-                    searchHtml += "<div class = 'result-article'><div class='dummy'>" + val.title + "</div><div class='search-desc'>"  + val.date + " - " + val.desc +"</div></div>";
-                });
-                $("#results-field").html(searchHtml);
+
+            const resultJson = await searchJsonByKeyword(searchWord);
+            const $resultsField = $("#results-field");
+            $resultsField.empty();
+
+            function getHighlightedHtml(text, keyword) {
+                if (!text) return "";
+                if (!keyword) return $("<div>").text(text).html();
+
+                let escaped = $("<div>").text(text).html();
+
+                const escapedKeyword = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+                const regex = new RegExp(`(${escapedKeyword})`, "gi");
+                return escaped.replace(regex, "<b>$1</b>");
             }
-        })
+
+            if (!resultJson) {
+                $resultsField.append($("<div>", { class: "result-article", text: "検索結果が見つかりません..." }));
+            } else {
+                const $mainArticle = $("<div>", { class: "result-article" });
+                const $mainDiv = $("<div>", { class: "main" });
+
+                const $mainLink = $("<a>", { href: resultJson.main.link });
+                $mainLink.html(getHighlightedHtml(resultJson.main.title, searchWord));
+
+                const $mainDesc = $("<div>", { class: "search-desc" });
+                $mainDesc.html(
+                    getHighlightedHtml(`${resultJson.main.date} - ${resultJson.main.desc}`, searchWord)
+                );
+
+                $mainDiv.append($mainLink);
+                $mainArticle.append($mainDiv).append($mainDesc);
+                $resultsField.append($mainArticle);
+
+                $.each(resultJson.sub, function (index, val) {
+                    const $subArticle = $("<div>", { class: "result-article" });
+
+                    const $subTitle = $("<div>", { class: "dummy" });
+                    $subTitle.html(getHighlightedHtml(val.title, searchWord));
+
+                    const $subDesc = $("<div>", { class: "search-desc" });
+                    $subDesc.html(
+                        getHighlightedHtml(`${val.date} - ${val.desc}`, searchWord)
+                    );
+
+                    $subArticle.append($subTitle).append($subDesc);
+                    $resultsField.append($subArticle);
+                });
+            }
+        });
     </script>
 </body>
 

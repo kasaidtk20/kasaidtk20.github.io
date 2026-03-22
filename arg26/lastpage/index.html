@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+</head>
+
+<body>
+    <div class="search-box"><input type="text" placeholder="サイト内を検索" id="search-input"><button id="searchBtn"><span
+                class="material-symbols-outlined" style="font-size: 20px;">search</span></button></div>
+    <div class="search-title">「<span id="search-word"></span>」の検索結果</div>
+    <div style="height: 800px;" id="results-field"></div>
+    <div class="obj">teat</div>
+    <div id="modal-overlay" style="display: none;">
+        <div id="modal-content">
+            <h2>[Info]</h2>
+            <p style="color:red;" id="last-date"></p>
+            <p style="color:red;">新しい記事が投稿されました</p>
+            <p><a href="test/test">いますぐ確認＞＞</a></p>
+        </div>
+    </div>
+    <!-- jquery scripts q-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="/arg26/search.js"></script>
+    <script src="last.js"></script>
+</body>
+</html>

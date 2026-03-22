@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewpoint" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="sample.css">
+    <title>関西大学 電気通信工学研究会</title>
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <a href="index.html">
+                <img src="picture/header.png" alt="関西大学電気通信工学研究会" />
+            </a>
+        </div>
+        <nav id="menu">
+            <ul>
+                <li>
+                    <a href="#dtktoha">電気通信工学研究会とは</a>
+                </li>
+                <li>
+                    <a href="#katsudo">活動について</a>
+                </li>
+                <li>
+                    <a href="http://kuclubdtk.hateblo.jp">ブログ</a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/kuclubdtk">Twitter</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="newchat">
+        <p><a href="/arg26">メインページ</a> > メンバーチャット</p>
+        <div class="chats-container">
+            <div class="chat-title">[[2026年3月17日]] のチャット</div>
+            <div id="chats-field"></div>
+            <div class="chat-wrap" style="display: none;">
+                <div class="chat-icon"><img src="/picture/dtk_icon.png"></div>
+                <div>
+                    <div class="chat-user"><a href="/arg26">カイリ</a> : <span class="chat-date">2026/3/17 22:47</span>&nbsp;&nbsp;ID : xxueo12</div>
+                    <div class="bubble left">
+                        いきなりごめんね<br>このサイト内に自分以外に人がいたから、もしかしてと思ってチャット欄に招待しちゃった
+                    </div>
+                </div>
+            </div>
+            <div class="writing" id="load" style="display: none;">USERが入力中<span>・</span><span>・</span><span>・</span></div>
+            <div id="chat-end" style="margin-top: 20px;"></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="chat_system.js"></script>
+    <script>
+        displayChats();
+    </script>
+</body>
+
+</html>

@@ -9,7 +9,7 @@ $("#search-input").on("keypress", function (e) {
 
 async function searchJsonByKeyword(inputWord) {
     try {
-        const data = await $.getJSON("search.json");
+        const data = await $.getJSON("/arg26/search.json");
 
         const result = data.searchs.find(item => item.keyword === inputWord);
         console.log(result);
@@ -30,7 +30,6 @@ function jumpToSearchPage() {
     if (!word) return;
 
     var url = "/arg26/find/index.html?search=" + encodeURIComponent(word);
-
     if (window.location.pathname.includes("/arg26/find/")) {
         window.location.href = url;
     } else {
