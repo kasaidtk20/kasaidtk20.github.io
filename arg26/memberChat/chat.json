@@ -1,31 +1,106 @@
 {
+    "member": [
+        {
+            "id": "0",
+            "name": "電通研",
+            "icon": "/arg26/picture/dtk_icon.png"
+        },
+        {
+            "id": "1",
+            "name": "カイリ",
+            "icon": "/arg26/picture/kairi_icon.png",
+            "chat_id": "odayaka_gohan",
+            "chat_name": "kairi"
+        },
+        {
+            "id": "2",
+            "name": "リク",
+            "icon": "/arg26/picture/riku_icon.png",
+            "chat_id": "landground",
+            "chat_name": "Riku"
+        },
+        {
+            "id": "3",
+            "name": "会長",
+            "icon": "/arg26/picture/kaicho_icon.png",
+            "chat_id": "apple_east",
+            "chat_name": "Kaicho"
+        },
+        {
+            "id": "4",
+            "name": "ネギシ",
+            "icon": "/arg26/picture/negishi_icon.png",
+            "chat_id": "a_rattsatsa",
+            "chat_name": "Negishi"
+        },
+        {
+            "id": "5",
+            "name": "みゃま",
+            "icon": "/arg26/picture/myama_icon.png",
+            "chat_id": "deepmountain",
+            "chat_name": "Myama"
+        },
+        {
+            "id": "6",
+            "name": "リンタロウ",
+            "icon": "/arg26/picture/rint_icon.png",
+            "chat_id": "vipper_saga",
+            "chat_name": "Rintaro"
+        },
+        {
+            "id": "7",
+            "name": "ジョージ",
+            "icon": "/arg26/picture/george_icon.png",
+            "chat_id": "yawararaka_bank",
+            "chat_name": "george"
+        },
+        {
+            "id": "8",
+            "name": "じゅんた",
+            "icon": "/arg26/picture/junta_icon.png",
+            "chat_id": "kadai_huyou",
+            "chat_name": "Junta"
+        }
+    ],
     "chats":[
         {
-            "user":"カイリ",
+            "user":"1",
+            "waittime": "2000",
             "message":"いきなりごめんね<br>このサイト内に自分以外に人がいたから、もしかしてと思ってチャット欄に招待しちゃった"
         },
         {
-            "user":"カイリ",
+            "user":"1",
+            "waittime": "2000",
             "message":"さっきすいそうが完成してたのを見たんだけど、君が完成させてくれたの？"
         },
         {
-            "user":"会長",
+            "user":"3",
+            "waittime": "2500",
             "message":"多分そうじゃないか？"
         },
         {
-            "user":"D",
+            "user":"2",
+            "waittime": "0",
             "message":"カイリのブログみて完成させてくれたんじゃない？"
         },
         {
-            "user":"カイリ",
-            "message":"！？<br>なんで二人ともここにいるんですか！？"
+            "user":"1",
+            "waittime": "1500",
+            "message":"！？"
         },
         {
-            "user":"会長",
+            "user":"1",
+            "waittime": "2000",
+            "message":"なんで二人ともここにいるんですか！？"
+        },
+        {
+            "user":"2",
+            "waittime": "2000",
             "message":"Xで旧サイトが見れるようになってるって聞いて久々に飛んできたんだよ"
         },
         {
-            "user":"会長",
+            "user":"3",
+            "waittime": "2500",
             "message":"サイトセキュリティも現代からしたらガバガバになってたし、色々サイト内検索してたらすいそうがアップロードされましたってでたし"
         }
     ]

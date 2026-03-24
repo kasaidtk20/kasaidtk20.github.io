@@ -1,215 +1,84 @@
-body {
-  font-family: "Noto Sans JP", sans-serif;
+.newchat {
+    font-family: "Noto Sans JP", sans-serif;
 }
 
-header {
-  background: #c1fff7;
-  padding-bottom: 20px;
-  -webkit-box-shadow: 0 0 0 5px #c1fff7;
-          box-shadow: 0 0 0 5px #c1fff7;
-  border: solid 5px white;
-}
-
-#header {
-  text-align: center;
-}
-
-#header img {
-  width: 97%;
-}
-
-#menu {
-  margin: 0 20px 0 -20px;
-}
-
-#menu ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#menu ul li {
-  width: 200px;
-  height: 70px;
-  margin: 4px;
-  background: white;
-  border-radius: 5px;
-  text-align: center;
-}
-
-#menu ul li a {
-  display: block;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 30px;
-  text-decoration: none;
-  color: #36c4ce;
-}
-
-#menu ul li:hover {
-  background: #36c4ce;
-  -webkit-transition: background .3s;
-  transition: background .3s;
-}
-
-#menu ul li:hover a {
-  color: white;
-  -webkit-transition: color .3s;
-  transition: color .3s;
-}
-
-#all {
-  margin: 0 100px;
-}
-
-.top {
-  font-size: 200%;
-}
-
-.top:before {
-  margin: 0 10px 0 0;
-  padding-left: 5px;
-  content: url(picture/denicon.png);
-}
-
-.top2 {
-  border-left: solid 10px #65ffea;
-  margin-left: -50px;
-  padding-left: 5px;
-}
-
-.midashi {
-  border-bottom: dashed 3px #65ffea;
-}
-
-#dtktoha, #seisakubutsu2 {
-  margin-left: -70px;
-}
-
-.space {
-  margin-left: 15px;
-}
-
-#dentotsu {
-  width: 600px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin: auto;
-}
-
-#dentotsu img {
-  width: 50%;
-}
-
-#seika {
-  background: #c1fff7;
-  -webkit-box-shadow: 0px 0px 0px 5px #c1fff7;
-          box-shadow: 0px 0px 0px 5px #c1fff7;
-  border: dashed 2px white;
-  padding: 0.2em 0.5em;
-}
-
-.image {
-  border: double 5px #86d3ff;
-  padding: 10px;
-}
-
-.image img {
-  width: 30%;
-}
-
-.image p {
-  font-size: 2.3vw;
-  margin: 0.5vw 0;
-}
-
-/* コンテナの基本設定 */
 .chats-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-  background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f0f0f0;
 }
 
-.chat-wrap{
-  display: flex;
-  padding: 10px 0;
+.chat-wrap {
+    display: flex;
+    padding: 10px 0;
 }
 
-.chat-wrap img{
-  max-width: 50px;
-  padding-top: 10px;
-  padding-right: 10px;
+.chat-wrap img {
+    max-width: 50px;
+    padding-top: 10px;
+    padding-right: 10px;
 }
 
-/* 吹き出し共通スタイル */
 .bubble {
-  position: relative;
-  padding: 10px 15px;
-  border-radius: 15px;
-  max-width: 70%;
-  font-size: 16px;
-  line-height: 1.5;
-  word-wrap: break-word;
+    position: relative;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word;
 }
 
-.chat-title{
-  font-size: 16px;
+.chat-title {
+    font-size: 16px;
 }
-.chat-user{
-  padding-left: 10px;
+
+.chat-user {
+    padding-left: 10px;
 }
+
 /* 左側の吹き出し */
 .left {
-  align-self: flex-start;
-  background-color:#fff;
-  color: #333;
-  margin-left: 10px;
+    align-self: flex-start;
+    background-color: #fff;
+    color: #333;
+    margin-left: 10px;
 }
 
 .left::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: -10px; /* 三角形を左に突き出す */
-  border-style: solid;
-  border-width: 5px 10px 5px 0;
-  border-color: transparent #fff transparent transparent;
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    /* 三角形を左に突き出す */
+    border-style: solid;
+    border-width: 5px 10px 5px 0;
+    border-color: transparent #fff transparent transparent;
 }
 
 /* 右側の吹き出し */
 .right {
-  align-self: flex-end;
-  background-color: #78e08f;
-  color: #fff;
-  margin-right: 10px;
+    align-self: flex-end;
+    background-color: #78e08f;
+    color: #fff;
+    margin-right: 10px;
 }
 
 .right::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  right: -10px; /* 三角形を右に突き出す */
-  border-style: solid;
-  border-width: 5px 0 5px 10px;
-  border-color: transparent transparent transparent #78e08f;
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    /* 三角形を右に突き出す */
+    border-style: solid;
+    border-width: 5px 0 5px 10px;
+    border-color: transparent transparent transparent #78e08f;
 }
 
 .writing {
-    height: auto;
+    height: 30px;
     white-space: nowrap;
     background-color: #888;
     padding: 1px 20px;
@@ -217,49 +86,69 @@ header {
 
     width: fit-content;
     margin-left: 40px;
-    margin-bottom: 40px;
 
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
 }
-    .writing span {
-        display: inline-block;
-        vertical-align: middle;
+
+.loading span {
+    height: inherit;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.loading span:nth-of-type(1) {
+    -webkit-animation: animation 2s ease 0s infinite;
+    animation: animation 2s ease 0s infinite;
+}
+
+.loading span:nth-of-type(2) {
+    -webkit-animation: animation 2s ease 0.1s infinite;
+    animation: animation 2s ease 0.1s infinite;
+}
+
+.loading span:nth-of-type(3) {
+    -webkit-animation: animation 2s ease 0.2s infinite;
+    animation: animation 2s ease 0.2s infinite;
+}
+
+@media screen and (min-width: 601px) {
+    .mobile-only {
+        display: none;
     }
-    .writing span:nth-of-type(1) {
-        -webkit-animation: animation 2s ease 0s infinite;
-        animation: animation 2s ease 0s infinite;
+
+    .chat-wrap img {
+        padding-top: 15px;
     }
-    .writing span:nth-of-type(2) {
-        -webkit-animation: animation 2s ease 0.1s infinite;
-        animation: animation 2s ease 0.1s infinite;
-    }
-    .writing span:nth-of-type(3) {
-        -webkit-animation: animation 2s ease 0.2s infinite;
-        animation: animation 2s ease 0.2s infinite;
-    }
+}
 
 @-webkit-keyframes animation {
     0% {
         margin-top: 0;
     }
+
     5% {
         margin-top: -1em;
     }
+
     10% {
         margin-top: 0;
     }
+
     13% {
         margin-top: -0.5em;
     }
+
     16% {
         margin-top: 0;
     }
+
     18% {
         margin-top: -0.2em;
     }
+
     20% {
         margin-top: 0;
     }
@@ -269,21 +158,27 @@ header {
     0% {
         margin-top: 0;
     }
+
     5% {
         margin-top: -1em;
     }
+
     10% {
         margin-top: 0;
     }
+
     13% {
         margin-top: -0.5em;
     }
+
     16% {
         margin-top: 0;
     }
+
     18% {
         margin-top: -0.2em;
     }
+
     20% {
         margin-top: 0;
     }

@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "MaruMonica";
+    src: url("/arg26/fonts/x12y16pxMaruMonica.ttf") format("truetype");
+    font-display: swap;
+}
+
+.chatpage-wrap{
+    font-family: "MaruMonica", sans-serif;   
+    margin: 0 80px;
+}
+
+@media screen and (max-width: 600px) {
+    .chatpage-wrap{
+        margin: 0;
+    }
+}
+
+
+.chatpage-header {
+    padding: 10px 10px 8px 15px;
+    background-color: #bdd7ee;
+    font-family: "MaruMonica", sans-serif;
+    font-size: 19px;
+}
+
+.chatpage-chats {
+    border: 2px dotted #bdd7ee;
+    padding:10px 15px;
+    padding-bottom: 20px;
+}
+
+.chatpage-cont{
+    display: flex;
+    padding:10px 15px;
+    border-bottom: 1px solid #bdd7ee;
+}
+
+.chat-right{
+    margin:20px 30px;
+}
+
+.chat-icon{
+    max-width: 50px;
+    border-radius: 3px;
+}
+
+.chat-datas{
+    color: #2e75b6;
+}
+
+.chat-datas .name{
+    color:#0b4c87;
+    font-weight: bold;
+}
+
+.chat-message{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.back .chatpage-header{
+    background-color: #d6aa21;
+    color: white;
+}
+
+.back .chat-datas .name{
+    color: white;
+}
+
+.back .chat-datas{
+    color: white;
+}
+.back .chatpage-chats{
+    border: 2px dotted #d6aa21;
+}
+.back .chatpage-cont{
+    border-bottom: 1px solid #d6aa21;
+}

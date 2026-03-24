@@ -1,0 +1,261 @@
+{
+    "prog_num": "10",
+    "member": [
+        {
+            "id": "0",
+            "name": "電通研",
+            "icon": "/arg26/picture/dtk_icon.png"
+        },
+        {
+            "id": "1",
+            "name": "カイリ",
+            "icon": "/arg26/picture/kairi_icon.png",
+            "chat_id": "odayaka_gohan",
+            "chat_name": "kairi"
+        },
+        {
+            "id": "2",
+            "name": "リク",
+            "icon": "/arg26/picture/riku_icon.png",
+            "chat_id": "landground",
+            "chat_name": "Riku"
+        },
+        {
+            "id": "3",
+            "name": "会長",
+            "icon": "/arg26/picture/kaicho_icon.png",
+            "chat_id": "apple_east",
+            "chat_name": "Kaicho"
+        },
+        {
+            "id": "4",
+            "name": "ネギシ",
+            "icon": "/arg26/picture/negishi_icon.png",
+            "chat_id": "a_rattsatsa",
+            "chat_name": "Negishi"
+        },
+        {
+            "id": "5",
+            "name": "みゃま",
+            "icon": "/arg26/picture/myama_icon.png",
+            "chat_id": "deepmountain",
+            "chat_name": "Myama"
+        },
+        {
+            "id": "6",
+            "name": "リンタロウ",
+            "icon": "/arg26/picture/rint_icon.png",
+            "chat_id": "vipper_saga",
+            "chat_name": "Rintaro"
+        },
+        {
+            "id": "7",
+            "name": "ジョージ",
+            "icon": "/arg26/picture/george_icon.png",
+            "chat_id": "yawararaka_bank",
+            "chat_name": "george"
+        },
+        {
+            "id": "8",
+            "name": "じゅんた",
+            "icon": "/arg26/picture/junta_icon.png",
+            "chat_id": "kadai_huyou",
+            "chat_name": "Junta"
+        }
+    ],
+    "pages": [
+    {
+      "mode": "lv2",
+      "url": "130209-hjdu23",
+      "date": "2013/02/09",
+      "title": "",
+      "prog": "5",
+      "keyword": "ゲーム制作",
+      "num": "null",
+      "chats": [
+        { "user_id": "3", "message": "今月の目標は「作品を完成させること」です！　例えばゲーム制作の場合、どんなに面白くないと感じても、楽しくないと感じても、完成しないとしょうがない！　ゲーム制作以外もも同様！　ひとまず完成させましょう！" },
+        { "user_id": "4", "message": "それが一番むずいのでは？" },
+        { "user_id": "7", "message": "それはそう" },
+        { "user_id": "3", "message": "頑張ってくれ〜〜" },
+        { "user_id": "3", "message": "制作のテーマは後で送る" },
+        { "user_id": "5", "message": "話変わるけど、カイリは？今日もサークル来てなかったし目標共有できてないんだけどどうしよう" },
+        { "user_id": "6", "message": "最近チャットにもいませんよね？" },
+        { "user_id": "2", "message": "あいつ試験期間からの疲れで寝込んでるらしい" },
+        { "user_id": "7", "message": "草" },
+        { "user_id": "4", "message": "あら心配" },
+        { "user_id": "8", "message": "まあ今月の目標チャットで残してますしきっと見てるでしょう" }
+      ]
+    },
+    {
+      "mode": "lv2",
+      "url": "130210-hksor2s",
+      "date": "2013/02/10",
+      "title": "",
+      "prog": "7",
+      "keyword": "すっ",
+      "num": "null",
+      "chats": [
+        { "user_id": "1", "message": "リク〜次のゲーム制作一緒にやろ" },
+        { "user_id": "2", "message": "何作る？" },
+        { "user_id": "1", "message": "後でイメージは見せる　とりあえず結論から言うとリクには「すっ」のモデルを作って欲しい" },
+        { "user_id": "2", "message": "「すっ」を？？？" },
+        { "user_id": "1", "message": "そう　「すっ」をリングにしたウォーターゲーム作りたいんだ" },
+        { "user_id": "2", "message": "ウォーターゲームだとしたら「すっ」以外にもボタンや操作台も必要だよね？" },
+        { "user_id": "1", "message": "あ" },
+        { "user_id": "1", "message": "本当だ…" },
+        { "user_id": "2", "message": "こっちもどんな作品作るか迷ってたところだし、自分で良ければ作るよ　で、共同作品として出したらお互い負担分けられるんじゃない？" },
+        { "user_id": "1", "message": "いいの？ぜひお願いしたいな" },
+        { "user_id": "2", "message": "決まりだね　じゃあこっちはボタンや操作台とか大まかに作ってみるよ" },
+        { "user_id": "1", "message": "ありがとう　よろしくね" }
+      ]
+    },
+    {
+      "mode": "lv2",
+      "url": "121219-kajso2id",
+      "date": "2012/12/19",
+      "title": "",
+      "prog": "9",
+      "keyword": "高速回転除夜の鐘",
+      "num": "p9",
+      "chats": [
+        { "user_id": "8", "message": "これで楽に煩悩が消せるぞう！" },
+        { "user_id": "7", "message": "草" },
+        { "user_id": "1", "message": "これ今度見に行ってもいい？　生で見たい！" },
+        { "user_id": "8", "message": "いいですよ！　ぜひ煩悩消しに来てください。" },
+        { "user_id": "4", "message": "煩悩をすぐさま消し去ろうとするその思いが、もはや煩悩なのかもしれませんーーー" },
+        { "user_id": "3", "message": "↑草　確かに" },
+        { "user_id": "5", "message": "煩悩をすぐに消したい→高速回転除夜の鐘で払う→しかし高速回転除夜の鐘のせいで「早く煩悩を消したい」という煩悩が発生→以下ループ" },
+        { "user_id": "6", "message": "ループしすぎて落ちるかPCがめっちゃ熱くなるやつじゃないですかやだー！" },
+        { "user_id": "4", "message": "みんなもコーディングのミスには気をつけよう！" },
+        { "user_id": "2", "message": "人力でコーディングのミスに気づけるのなら苦労はしないよ" },
+        { "user_id": "7", "message": "コーディングは大変定期" }
+      ]
+    },
+    {
+      "mode": "lv2",
+      "url": "130216-hgshe29s",
+      "date": "2013/02/16",
+      "title": "モデリング完成",
+      "prog": "17",
+      "keyword": "異臭",
+      "num": "p17",
+      "chats": [
+        { "user_id": "2", "message": "この間言ってたモデリング完成した　データ送っといたからみてね" },
+        { "user_id": "1", "message": "今データ見たけどさ" },
+        { "user_id": "1", "message": "なんかデータ多くない？依頼したのって「すっ」だけじゃなかった？" },
+        { "user_id": "2", "message": "え？ゲーム的に「すっ」以外にもボタンやら操作台いるって話したよな？" },
+        { "user_id": "1", "message": "え" },
+        { "user_id": "1", "message": "覚えてないんだけど" },
+        { "user_id": "1", "message": "履歴遡ってくる" },
+        { "user_id": "2", "message": "りょ" },
+        { "user_id": "1", "message": "あった" },
+        { "user_id": "2", "message": "でしょ" },
+        { "user_id": "1", "message": "なんで忘れてたんだ自分" },
+        { "user_id": "1", "message": "は？　なんで？" },
+        { "user_id": "2", "message": "こっちに聞かれてましても…　きっと多分カイリが錯乱でもしてたんじゃないかとしか…" },
+        { "user_id": "1", "message": "あと全然関係ないんだけど、パソコンから異臭がすることってよくある？" },
+        { "user_id": "2", "message": "本当に錯乱してる？？" },
+        { "user_id": "2", "message": "そのPC大丈夫か？　一旦電通件に持ってこい、心配だからみるわ" },
+        { "user_id": "1", "message": "平日なら人いるかな　いくわ" }
+      ]
+    },
+    {
+      "mode": "lv2",
+      "url": "130220-bnak2on",
+      "date": "2013/02/20",
+      "title": "休んだほうがいい",
+      "prog": "19",
+      "keyword": "作業通話",
+      "num": "null",
+      "chats": [
+        { "user_id": "3", "message": "カイリ、あのさちょっといい？" },
+        { "user_id": "1", "message": "なんですか、？" },
+        { "user_id": "3", "message": "いや今月の目標のために無理しすぎてないかなって思って" },
+        { "user_id": "3", "message": "あくまであれは目標だから、無理してまでやらなくていいよ" },
+        { "user_id": "1", "message": "大丈夫です" },
+        { "user_id": "1", "message": "というか無理しないとダメなんですよ" },
+        { "user_id": "1", "message": "自分でさえ面白いと感じれないものに友達付き合わせて、ましてや完成させられないなんて絶対にダメですし嫌なんですよ" },
+        { "user_id": "1", "message": "高速回転除夜の鐘とかすごいのを作ってる人もいますし、むしろもっと頑張らないといけないんです" },
+        { "user_id": "3", "message": "お前の奴も結構面白い案だと思うんだけどな" },
+        { "user_id": "3", "message": "なんにせよ体調崩したら何もできなくなるだろ　昨日も深夜まで作業通話開いてたし、通話中もあんま呂律回ってなかっただろ　ちゃんと休め" },
+        { "user_id": "1", "message": "いい加減にしてkください、大丈夫って言ってるjじゃないですか" },
+        { "user_id": "3", "message": "うーん、そうか" },
+        { "user_id": "3", "message": "じゃあもし何か悩んだり、詰まったりしたら頼ってくれるか？" },
+        { "user_id": "1", "message": "分かってます" },
+        { "user_id": "1", "message": "あ、そうだ　明日会長って電通件います？　パソコンの調子？というか臭いがh変で、それを見てほしいです" },
+        { "user_id": "3", "message": "メンテナンス的なのすればいいか？" },
+        { "user_id": "1", "message": "はい" },
+        { "user_id": "3", "message": "了解　昼頃には電通件にいるようにしよう" }
+      ]
+    },
+    {
+      "mode": "lv2",
+      "url": "130221-kansj2s",
+      "date": "2013/02/21",
+      "title": "カイリPCをメンテしようの会",
+      "prog": "20",
+      "keyword": "メンテナンス",
+      "num": "null",
+      "chats": [
+        { "user_id": "1", "message": "ネギシは忙しくてこrwないらしいです" },
+        { "user_id": "1", "message": "ちょっとk今日、発話が難しいのでチャットで喋ります" },
+        { "user_id": "2", "message": "誤字多くないか？" },
+        { "user_id": "1", "message": "手がふｒえる" },
+        { "user_id": "3", "message": "頼むから休んでくれ　会長はお前の体調が心配だよ" },
+        { "user_id": "2", "message": "あとさ、あの、カイリのPCそもそも変な臭いしなくない？" },
+        { "user_id": "1", "message": "昼メシ買いに行ってる間にh人のPCを触るな" },
+        { "user_id": "2", "message": "まだ触ってないけど、今のところ変な臭いはしてない" },
+        { "user_id": "3", "message": "嫌な臭いって焦げ臭い感じか？" },
+        { "user_id": "1", "message": "え？　ふとした時にnなんかの刺激臭的な臭いsしません？" },
+        { "user_id": "3", "message": "しない" },
+        { "user_id": "3", "message": "一旦中身見てみていいか？" },
+        { "user_id": "1", "message": "もうすぐm戻るのでその時にお願いします" },
+        { "user_id": "1", "message": "帰還" },
+        { "user_id": "3", "message": "見てみたけど特に何もないな…" },
+        { "user_id": "1", "message": "絶対あったんですっtて" },
+        { "user_id": "1", "message": "作業中になら、、感じるのかな？" },
+        { "user_id": "2", "message": "とりあえず今日は家に帰って休んだら？" },
+        { "user_id": "2", "message": "発話もやばいのなら薬飲んで寝た方がいい" },
+        { "user_id": "3", "message": "というかずっと気になってたんだけど病院いったか？" },
+        { "user_id": "1", "message": "そんな暇ありませんnでしたよ？？" },
+        { "user_id": "1", "message": "頑張らあないといけないので、風邪を頑張れないr理由にしたくなくて、、みんなに追いつきたくて" },
+        { "user_id": "1", "message": "だから、手のふるえも熱も気にしないyうにして" },
+        { "user_id": "1", "message": "ずっとデバッグしtて、コード直してました" },
+        { "user_id": "1", "message": "今日もマスクと消毒しているし、みなさんにhは迷惑かけてないですしっm問題ありません" },
+        { "user_id": "1", "message": "だから、大丈夫でsssss" }
+      ]
+    },
+    {
+      "mode": "lv2",
+      "url": "130221-dhdu394s",
+      "date": "2013/02/21",
+      "title": "緊急連絡",
+      "prog": "23",
+      "keyword": "昏睡",
+      "num": "null",
+      "chats": [
+        { "user_id": "3", "message": "カイリが倒れました　今は昏睡状態で容体が悪いということしかわかりません" },
+        { "user_id": "2", "message": "カイリのPCのメンテしてたらカイリが倒れて、でもピクピクしてて" },
+        { "user_id": "3", "message": "声かけても反応なかったから急いで救急車呼んだんだ" },
+        { "user_id": "2", "message": "救急車の人に今までのカイリの様子を説明したら脳炎かもしれないって" },
+        { "user_id": "4", "message": "サークル棟に救急車来てたのってそういうことだったの！？" },
+        { "user_id": "8", "message": "目覚める様子はないんですか？" },
+        { "user_id": "7", "message": "家族は？" },
+        { "user_id": "3", "message": "目覚める様子は今のところないらしい　家族はまだ来てない　来るまでは自分とDが付き添うことになってる" },
+        { "user_id": "8", "message": "そんな…" },
+        { "user_id": "5", "message": "というかこの場合あいつのプロジェクトどうなるの？" },
+        { "user_id": "2", "message": "普通いまその話しますか？" },
+        { "user_id": "5", "message": "いずれはしなきゃならんくない？" },
+        { "user_id": "7", "message": "それはそうですけど…" },
+        { "user_id": "3", "message": "ひとまず様子見て、しばらく目覚めないようなら一旦休止ってことにするしかないか…？" },
+        { "user_id": "2", "message": "本人にも聞かずに休止はひどいんじゃないですか？" },
+        { "user_id": "5", "message": "その本人に聞けないんだわ" },
+        { "user_id": "4", "message": "カイリ、下手したら大学も休学することになる…？" },
+        { "user_id": "6", "message": "俺がもう少し早く気づいてれば" },
+        { "user_id": "6", "message": "保健だより読んでたのに" },
+        { "user_id": "5", "message": "↑Cは保健だよりを信用しすぎ" },
+        { "user_id": "7", "message": "気付けないのも無理ないよ" }
+      ]
+    }
+  ]
+}

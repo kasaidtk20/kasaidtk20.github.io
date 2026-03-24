@@ -4,12 +4,13 @@
 <head>
     <meta name="robots" content="noindex">
     <meta charset="utf-8">
+    <link rel="stylesheet" href="chatpage.css">
     <link rel="stylesheet" href="/arg26/arg26.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
 </head>
 
-<body class="">
+<body class="back">
     <div class="page-wrap">
         <div class="header">
             <div class="header-top">
@@ -32,6 +33,13 @@
             </div>
         </div>
         <div class="content">
+            <div class="chatpage-wrap">
+                <div class="chatpage-header">
+                    <span id="chatpage-date">NULL</span>
+                </div>
+                <div class="chatpage-chats" id="chatpage-chats">
+                </div>
+            </div>
         </div>
         <div>
             <div class="prog">01/10</div>
@@ -65,6 +73,34 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="/arg26/search.js"></script>
+    <script src="chatpage.js"></script>
+    <script>
+        $(document).ready(async function () {
+            const urlWord = getParameterByName("url");
+            const json = await getChatJson();
+            const contentJson = searchChatContent(urlWord, json);
+            if (!json) {
+
+            } else {
+                if (contentJson.mode === "lv2") {
+                    $("body").addClass("back");
+                }
+                $("#chatpage-date").text(contentJson.date);
+                $("#blog-title").text(contentJson.title);
+                var $content = $("#chatpage-chats");
+                $content.empty();
+                $.each(contentJson.chats, function (index, val) {
+                    var chat = "";
+                    const num = index + 1;
+                    const menberJson = searchMenberFromId(val.user_id, json);
+                    chat += '<div class="chatpage-cont"><div class="chat-left"><img class="chat-icon" src="' + menberJson.icon + '"></div><div class="chat-right"><div class="chat-datas">' + num;
+                    chat += '.&nbsp;&nbsp;&nbsp;&nbsp;<span class="name">' + menberJson.chat_name + '</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id：' + menberJson.chat_id + '</div><div class="chat-message">'
+                    chat += val.message;
+                    $content.append(chat);
+                });
+            }
+        })
+    </script>
     <script>
         // Search Script
         $(function () {
@@ -85,27 +121,6 @@
             });
         });
     </script>
-    <!--
-    <script>
-        $(document).ready(async function () {
-            searchWord = getParameterByName("search");
-            $("#search-word").text(searchWord);
-            $("#search-input").val(searchWord);
-            resultJson = await searchJsonByKeyword(searchWord);
-            var searchHtml = "";
-            if (!resultJson) {
-                $("#results-field").html("<div class='result-article'>検索結果が見つかりません...</div>");
-            } else {
-                var searchHtml = "";
-                searchHtml += "<div class='result-article'><div class='main'><a href='" + resultJson.main.link + "'>" + resultJson.main.title + "</a></div><div class='search-desc'>" + resultJson.main.date + " - " + resultJson.main.desc + "</div></div>";
-                $.each(resultJson.sub, function(index, val){
-                    searchHtml += "<div class = 'result-article'><div class='dummy'>" + val.title + "</div><div class='search-desc'>"  + val.date + " - " + val.desc +"</div></div>";
-                });
-                $("#results-field").html(searchHtml);
-            }
-        })
-    </script>
-    -->
 </body>
 
 </html>

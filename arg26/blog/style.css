@@ -1,5 +1,62 @@
 .blog-box {
     margin: 8px;
+    display: none;
+}
+
+.lists{
+    display: none;
+}
+
+.list-box{
+    margin-top: 10px;
+    border: 1px solid #ffe085;
+    background-color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+.list-box a{
+    text-decoration: none;
+    color: black;
+}
+
+.list-header{
+    display: flex;
+    align-items: center;
+}
+
+.list-header img{
+    max-width: 38px;
+    border-radius: 25px;
+    border: 2px solid gray;
+    margin-right: 10px;
+}
+
+.list-date{
+    color: #777;
+    font-size: 13px;
+    margin-left: 3px;
+}
+
+.list-main{
+    margin: 20px 50px;
+}
+
+.list-title{
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.list-desc{
+    color: #777;
+    font-size: 13px;  
+    margin: 10px 20px; 
+}
+
+.list-footer{
+    text-align: right;
+    font-weight: bold;
+    margin-right: 10px;
+    text-decoration: underline;
 }
 
 .blog-header {

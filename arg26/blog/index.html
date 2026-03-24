@@ -26,17 +26,92 @@
                     <hr>
                     <li><a href="/arg26/">活動について</a></li>
                     <hr>
-                    <li><a href="/arg26/">メンバー紹介</a></li>
-                    <hr>
                     <li><a href="/arg26/blog/">ブログ</a></li>
+                    <hr>
+                    <li><a href="/arg26/">メンバー紹介</a></li>
                 </ul>
             </div>
         </div>
         <div class="content">
-            <div class="site-navi" id="site-navi"><a href="/arg26">トップページ</a> ＞ ブログ</div>
-            <div class="blog-box">
+            <div class="site-navi" id="site-navi"><a href="/arg26">トップページ</a> ＞ <a href="/arg26/blog">ブログ</a></div>
+            <div class="lists" id="lists">
+                <div class="list-box">
+                    <a href="/arg26/blog/index.html?url=130221">
+                        <div class="list-header">
+                            <img src="/arg26/picture/dtk_icon.png">
+                            <div>
+                                <div>電通研</div>
+                                <div class="list-date">2013/02/21</div>
+                            </div>
+                        </div>
+                        <div class="list-main">
+                            <div class="list-title">プロジェクト休止のお知らせ</div>
+                            <div class="list-desc">この度、カイリが主催していた...</div>
+                        </div>
+                        <div class="list-footer">
+                            Read More ＞＞
+                        </div>
+                    </a>
+                </div>
+                <div class="list-box">
+                    <a href="/arg26/blog/index.html?url=130216">
+                        <div class="list-header">
+                            <img src="/arg26/picture/kairi_icon.png">
+                            <div>
+                                <div>カイリ</div>
+                                <div class="list-date">2013/02/16</div>
+                            </div>
+                        </div>
+                        <div class="list-main">
+                            <div class="list-title">制作の進捗</div>
+                            <div class="list-desc">モデリングの方は...</div>
+                        </div>
+                        <div class="list-footer">
+                            Read More ＞＞
+                        </div>
+                    </a>
+                </div>
+                <div class="list-box">
+                    <a href="/arg26/blog/index.html?url=130213">
+                        <div class="list-header">
+                            <img src="/arg26/picture/riku_icon.png">
+                            <div>
+                                <div>リク</div>
+                                <div class="list-date">2013/02/13</div>
+                            </div>
+                        </div>
+                        <div class="list-main">
+                            <div class="list-title">ゲーム用のモデリングをしてる</div>
+                            <div class="list-desc">友達から注文を受けてゲーム用の...</div>
+                        </div>
+                        <div class="list-footer">
+                            Read More ＞＞
+                        </div>
+                    </a>
+                </div>
+                <div class="list-box">
+                    <a href="/arg26/blog/index.html?url=130210">
+                        <div class="list-header">
+                            <img src="/arg26/picture/kairi_icon.png">
+                            <div>
+                                <div>カイリ</div>
+                                <div class="list-date">2013/02/10</div>
+                            </div>
+                        </div>
+                        <div class="list-main">
+                            <div class="list-title">ゲーム制作プロジェクト開始！</div>
+                            <div class="list-desc">ゲーム制作始めました！...</div>
+                        </div>
+                        <div class="list-footer">
+                            Read More ＞＞
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="blog-box" id="blog-box">
                 <div class="blog-writer">
-                    <img src="/arg26/picture/kairi_icon.png" id="writer-img">&nbsp;&nbsp;<a href="/arg26/" id="writer-url"><span id="writer-name">カイリ</span></a>のブログ
+                    <img src="/arg26/picture/kairi_icon.png" id="writer-img">&nbsp;&nbsp;<a href="/arg26/"
+                        id="writer-url"><span id="writer-name">カイリ</span></a>のブログ
                 </div>
                 <div class="blog-header">
                     <div class="blog-title" id="blog-title">制作の進捗</div>
@@ -51,7 +126,7 @@
             </div>
         </div>
         <div>
-            <div class="prog">01/10</div>
+            <div class="prog"><span id="prog_num">01</span>/10</div>
             <div class="footer">
                 <div class="footer-bottom">
                     <div class="footer-bottom-title">電気通信工学研究会</div>
@@ -87,23 +162,24 @@
         $(document).ready(async function () {
             const urlWord = getParameterByName("url");
             const json = await getBlogJson();
-            const contentJson = searchBlogContent(urlWord,json);
-            const menberJson = searchMenberFromId(contentJson.writer,json);
-            if (!json) {
-
+            const contentJson = searchBlogContent(urlWord, json);
+            if (contentJson == undefined) {
+                $("#lists").show();
             } else {
-                if(contentJson.mode === "lv2"){
+                $("#blog-box").show();
+                const menberJson = searchMenberFromId(contentJson.writer, json);
+                if (contentJson.mode === "lv2") {
                     $("body").addClass("back");
                 }
-                $("#writer-img").attr("src",menberJson.icon);
+                $("#writer-img").attr("src", menberJson.icon);
                 $("#writer-name").text(menberJson.name);
                 const writerUrl = "/arg26/member/" + menberJson.id;
-                $("#writer-url").attr("href",writerUrl);
+                $("#writer-url").attr("href", writerUrl);
                 $("#blog-date").text(contentJson.date);
                 $("#blog-title").text(contentJson.title);
                 var content = "";
-                $.each(contentJson.article, function(index, val){
-                    content += "<div>"+ val +"</div>";
+                $.each(contentJson.article, function (index, val) {
+                    content += "<div>" + val + "</div>";
                 });
                 $("#blog-content").html(content);
             }
