@@ -1,7 +1,7 @@
 @font-face {
     font-family: "MaruMonica";
     src: url("/arg26/fonts/x12y16pxMaruMonica.ttf") format("truetype");
-    font-display: swap;
+    font-display: block;
 }
 
 .chatpage-wrap{

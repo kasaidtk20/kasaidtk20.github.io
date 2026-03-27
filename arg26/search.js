@@ -30,9 +30,10 @@ function jumpToSearchPage() {
     if (!word) return;
 
     var url = "/arg26/find/index.html?search=" + encodeURIComponent(word);
+    window.location.href = url;
     if (window.location.pathname.includes("/arg26/find/")) {
-        window.location.href = url;
+        
     } else {
-        window.open(url, '_blank');
+        //window.open(url, '_blank');
     }
 }

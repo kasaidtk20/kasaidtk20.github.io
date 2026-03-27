@@ -4,18 +4,16 @@
 <head>
     <meta name="robots" content="noindex">
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="chatpage.css">
-    <link rel="stylesheet" href="last.css">
-    <title>部員チャット - 電気通信工学研究会</title>
     <link rel="stylesheet" href="/arg26/arg26.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
 </head>
 
 <body class="back">
@@ -41,16 +39,30 @@
             </div>
         </div>
         <div class="content">
-            <div class="chatpage-wrap">
-                <div class="chatpage-header">
-                    <span id="chatpage-date">NULL</span>
+            <div class="site-navi" id="site-navi"><a href="/arg26">トップページ</a> ＞ <a href="/arg26/blog">ブログ</a></div>
+            <div class="blog-box" style="display: block;" id="blog-box">
+                <div class="blog-writer">
+                    <img src="/arg26/picture/kairi_icon.png" id="writer-img">&nbsp;&nbsp;<a href="/arg26/members#1"
+                        id="writer-url"><span id="writer-name">カイリ</span></a>のブログ
                 </div>
-                <div class="chatpage-chats" id="chatpage-chats">
+                <div class="blog-header">
+                    <div class="blog-title" id="blog-title">休止したプロジェクト</div>
+                    <div class="blog-date">最終更新日　　<span id="blog-date"></span></div>
+                </div>
+                <div class="blog-content" id="blog-content">
+                    <div>こんなプロジェクトもあったな</div>
+                    <div>すいそうのゲームコードの最後に{break}って入れるだけで完成はしたはずなのに、結局パソコンの電池切れと昏睡のせいでプロジェクトがダメになっちゃったな</div>
+                    <div>当時の仲間に申し訳ない…</div>
+                    <div>&nbsp;</div>
+                    <div>脳炎で倒れた後、しばらくしてから目が覚めて… </div>
+                    <div>その後もリハビリとかがあったから「もうこれじゃ忙しさ的にも電通件には戻れないかな」と思って退部したんだ</div>
+                    <div>そのままあの頃の仲間ともバラバラになっちゃったし、休止というより停止になっちゃったな</div>
+                    <div>もうすいそうのコードもないだろうし、あれは最後まで未完成のまま終わっちゃったんだなぁ…</div>
                 </div>
             </div>
         </div>
         <div>
-            <div class="prog"><span id="prog-num">0</span>/30</div>
+            <div class="prog"><span id="prog_num">28</span>/30</div>
             <div class="footer">
                 <div class="footer-bottom">
                     <div class="footer-bottom-title">電気通信工学研究会</div>
@@ -71,77 +83,24 @@
                 <div>
                 </div>
                 <div class="footer-notice">このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。</div>
-                <div class="footer-credit obj">
+                <div class="footer-credit">
                     製作：<a href="/" target="_blank">電気通信工学研究会</a>　ARG部
                 </div>
             </div>
-        </div>
-    </div>
-    <div id="modal-overlay" style="display: none; font-family: 'Noto Sans JP', sans-serif;">
-        <div id="modal-content">
-            <h2>[Info]</h2>
-            <p style="color:red;" id="last-date"></p>
-            <p style="color:red;">新しい記事が投稿されました</p>
-            <p><a href="/arg26/blog/new.html">いますぐ確認＞＞</a></p>
         </div>
     </div>
     <!-- jquery scripts q-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="/arg26/search.js"></script>
-    <script src="chatpage.js"></script>
-    <script src="last.js"></script>
+    <script src="blog.js"></script>
     <script>
         $(document).ready(async function () {
-            const urlWord = getParameterByName("url");
-            const json = await getChatJson();
-            const contentJson = searchChatContent(urlWord, json);
-            if (!json) {
-
-            } else {
-                if (contentJson.mode === "lv2") {
-                    $("body").addClass("back");
-                }
-                $("#chatpage-date").text(contentJson.date);
-                $("#blog-title").text(contentJson.title);
-                var $content = $("#chatpage-chats");
-                $content.empty();
-                $.each(contentJson.chats, function (index, val) {
-                    var chat = "";
-                    const num = index + 1;
-                    const menberJson = searchMenberFromId(val.user_id, json);
-                    chat += '<div class="chatpage-cont"><div class="chat-left"><img class="chat-icon" src="' + menberJson.icon + '"></div><div class="chat-right"><div class="chat-datas">' + num;
-                    chat += '.&nbsp;&nbsp;&nbsp;&nbsp;<span class="name">' + menberJson.chat_name + '</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id：' + menberJson.chat_id + '</div><div class="chat-message">'
-                    chat += val.message;
-                    $content.append(chat);
-                });
-                $("#prog-num").text(contentJson.prog);
-                if (contentJson.last === "true") {
-                    //$content.append("<div class='obj'>&nbsp;</div>");
-                    var scroll;
-                    var winH = $(window).height();
-                    var objTop = $('.obj').offset().top;
-                    var isShown = false;
-
-                    $(window).on('scroll', function () {
-                        scroll = $(window).scrollTop();
-
-                        if (scroll >= objTop - winH && !isShown) {
-                            var now = new Date();
-                            var y = now.getFullYear();
-                            var m = now.getMonth() + 1;
-                            var d = now.getDate();
-                            var h = now.getHours();
-                            var mi = now.getMinutes();
-                            var s = now.getSeconds();
-
-                            $("#last-date").text(y + "/" + m + "/" + d + " " + h + ":" + mi + ":" + s);
-                            $('#modal-overlay').fadeIn();
-                            isShown = true;
-                        }
-                    });
-                }
-            }
+            var now = new Date();
+            var y = now.getFullYear();
+            var m = now.getMonth() + 1;
+            var d = now.getDate();
+            $("#blog-date").text(y + "/" + m + "/" + d);
         })
     </script>
     <script>

@@ -1,11 +1,12 @@
 @font-face {
     font-family: "MaruMonica";
     src: url("/arg26/fonts/x12y16pxMaruMonica.ttf") format("truetype");
-    font-display: swap;
+    font-display: block;
 }
 html,
 body{
     background-color: #f2f2f2;
+    font-family: "MaruMonica", sans-serif; 
 }
 
 .search-header{
@@ -34,7 +35,7 @@ body{
     background-color: white;
     max-width: 600px;
     width: 600px;
-    height: 30px;
+    height: 40px;
     font-size: 20px;
     display: flex;
     align-items: center;
@@ -62,7 +63,6 @@ body{
 
 .search{
     margin: 30px;
-    font-family: "MaruMonica", sans-serif; 
 }
 .search-title{
     font-size: 30px;

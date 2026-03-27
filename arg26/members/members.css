@@ -1,0 +1,51 @@
+.members-wrap{
+    margin:30px;
+}
+
+.members-list{
+    margin:10px 90px;
+}
+
+@media screen and (max-width: 600px) {
+    .members-list{
+        margin: 10px 0;
+    }
+    .members-wrap{
+        margin: 0;
+    }
+}
+
+.list-box{
+    display:flex;
+    margin-bottom: 40px;
+}
+
+.list-box img{
+    max-width: 100px;
+    object-fit: contain;
+    height: fit-content;
+    height: intrinsic;
+    margin-top: 20px;
+    border: 1px solid #666;
+}
+
+.list-main{
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+.list-name{
+    font-size: 40px;
+    font-weight: 700;
+    font-family: "Noto Serif JP", serif;
+}
+
+.list-data{
+    margin-top:13px;
+}
+
+.list-data div{
+    border-bottom:2px solid #bdd7ee;
+    padding-left: 10px;
+    margin-bottom: 7px;
+}
