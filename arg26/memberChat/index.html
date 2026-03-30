@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewpoint" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="sample.css">
+    <link rel="stylesheet" href="/arg26/arg26.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="/arg26/picture/dtk_icon.jpg">
+    <link rel="preload" href="/arg26/picture/kaicho_icon.png">
+    <link rel="preload" href="/arg26/picture/kairi_icon.png">
+    <link rel="preload" href="/arg26/picture/junta_icon.png">
+    <link rel="preload" href="/arg26/picture/myama_icon.png">
+    <link rel="preload" href="/arg26/picture/negishi_icon.png">
+    <link rel="preload" href="/arg26/picture/riku_icon.png">
+    <link rel="preload" href="/arg26/picture/rint_icon.png">
+    <link rel="preload" href="/arg26/picture/george_icon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <title>チャットページ - 電気通信工学研究会</title>
+</head>
+
+<body>
+    <div class="page-wrap">
+        <div class="header">
+            <div class="header-top">
+                <img src="/arg26/picture/dtk-logo.png">
+                <div class="search-box-dummy"></div>
+                <div class="search-box"><input type="text" placeholder="サイト内を検索" id="search-input"><button
+                        id="searchBtn"><span class="material-symbols-outlined"
+                            style="font-size: 20px;">search</span></button></div>
+            </div>
+            <div class="header-bottom">
+                <ul>
+                    <li><a href="/arg26/">電気通信工学研究会とは</a></li>
+                    <hr>
+                    <li><a href="/arg26/activity/">活動について</a></li>
+                    <hr>
+                    <li><a href="/arg26/blog/">ブログ</a></li>
+                    <hr>
+                    <li><a href="/arg26/members">メンバー紹介</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="site-navi" id="site-navi"><a href="/arg26">トップページ</a> ＞ メンバーチャット</div>
+            <div class="newchat">
+                <div class="chats-container">
+                    <div class="chat-title">[[<span id="date">2026年3月17日</span>]] のチャット</div>
+                    <div id="chats-field"></div>
+                    <div class="chat-wrap" style="display: none;">
+                        <div class="chat-icon"><img src="/picture/dtk_icon.png"></div>
+                        <div>
+                            <div class="chat-user"><a href="/arg26">カイリ</a> : <span class="chat-date">2026/3/17
+                                    22:47</span>&nbsp;&nbsp;ID : xxueo12</div>
+                            <div class="bubble left">
+                                いきなりごめんね<br>このサイト内に自分以外に人がいたから、もしかしてと思ってチャット欄に招待しちゃった
+                            </div>
+                        </div>
+                    </div>
+                    <div class="writing" id="load" style="display: none;">
+                        <span id="next-user">USER</span>が入力中<span class="loading"><span>・</span><span>・</span><span>・</span></span>
+                    </div>
+                    <div class="end"><a href="/arg26/lastpage/" id="end" class="end-box" target="_blank">クリアページへ</a></div>
+                    <div id="chat-end"></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="prog">30/30</div>
+            <div class="footer">
+                <div class="footer-bottom">
+                    <div class="footer-bottom-title">電気通信工学研究会</div>
+                    <div class="footer-bottom-inside">
+                        <div><b>お問い合わせ</b></div>
+                        <ul>
+                            <li>Twitt00r</li>
+                            <li>FaceB00k</li>
+                        </ul>
+                    </div>
+                    <div class="footer-bottom-inside">
+                        <div><b>連絡先</b></div>
+                        <ul>
+                            <li>kuclubdtk★gmail.com<br>（★＝＠）</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                </div>
+                <div class="footer-notice">このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。</div>
+                <div class="footer-credit">
+                    製作：<a href="/" target="_blank">電気通信工学研究会</a>　ARG部
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="chat_system.js"></script>
+    <script>
+        displayChats();
+    </script>
+</body>
+
+</html>

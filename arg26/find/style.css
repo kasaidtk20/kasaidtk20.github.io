@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "MaruMonica";
+    src: url("/arg26/fonts/x12y16pxMaruMonica.ttf") format("truetype");
+    font-display: block;
+}
+html,
+body{
+    background-color: #f2f2f2;
+    font-family: "MaruMonica", sans-serif; 
+}
+
+.search-header{
+    margin-left:50px;
+    display: flex;
+    align-items: center;
+}
+.search-header img{
+    margin-right: 10px;
+    max-width: 60px;
+    border-radius: 25px;
+
+}
+
+@media screen and (max-width: 600px) {
+    .search-header{
+        margin-left:0px;
+    }
+}
+.search-wrap{
+    margin:30px;
+}
+
+.search-box{
+    border: 1px solid #333;
+    background-color: white;
+    max-width: 600px;
+    width: 600px;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+::placeholder {
+    font-family: "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+
+.search-box input{
+    border: none;
+    outline: none;
+    font-family: "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    font-size: 20px;
+    width: 100%;
+}
+
+.search-box button {
+    border: none;
+    background-color: inherit;
+}
+
+.search{
+    margin: 30px;
+}
+.search-title{
+    font-size: 30px;
+    margin: 20px;
+}
+#search-word{
+    font-weight: bold;
+}
+
+.main{
+    margin: 10px 0;
+}
+
+.result-article{
+    border-top: 3px solid #888;
+    padding:10px 40px;
+}
+
+.search-desc{
+    color: #666;
+}
+.dummy{
+    text-decoration: underline;
+    color: #333;
+}

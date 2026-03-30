@@ -1,0 +1,49 @@
+.activity-wrap{
+    margin:28px 109px;
+}
+
+.activity-header{
+    padding:10px 20px;
+    background-color: #ffd966;
+    margin-top:20px;
+    font-size: 22px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-family: "Noto Serif JP", sans-serif;
+}
+
+.activity-desc{
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+.activity-box{
+    margin-top: 30px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff3cc;
+    border-radius: 45px;
+}
+
+@media screen and (max-width: 600px) {
+    .activity-wrap{
+        margin:10px;
+    }
+    .activity-box{
+        margin:0;
+        margin-top:30px
+    }
+}
+
+.activity-title{
+    font-weight: bold;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.desc{
+    margin-bottom: 15px;
+}
+

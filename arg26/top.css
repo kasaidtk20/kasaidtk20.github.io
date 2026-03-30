@@ -1,0 +1,83 @@
+.top-wrap {
+    margin: 10px 80px;
+}
+
+.mobile{
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .top-wrap{
+        margin: 5px 0px;
+    }
+    .mobile{
+        display: block;
+    }
+}
+.top-title-box {
+    background-color: #f8e095;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    font-size: 30px;
+    font-weight: 800;
+    font-family: "Noto Serif JP", sans-serif;
+    width: 100%;
+}
+
+
+.title-dtk {
+    position: absolute;
+    background-color: #ffffff66;
+    border-radius: 10px;
+    top: 50%;
+    right: 50%;
+    width: max-content;
+    transform: translate(50%, -50%);
+    margin: auto;
+}
+
+.title-den {
+    background-image: url("/arg26/picture/den.png");
+    background-size: 180%;
+    background-position: 75% 45%;
+    display: block;
+    height: inherit;
+    width: 120px;
+}
+
+.title-tsu {
+    background-image: url("/arg26/picture/tsu.png");
+    background-size: 180%;
+    background-position: 35% 68%;
+    display: block;
+    height: inherit;
+    width: 120px;
+}
+
+.top-desc{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-dentsu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0px;
+}
+
+.top-dentsu div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 30px
+}
+
+.top-dt-img{
+    max-width: 150px;
+}

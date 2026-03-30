@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/arg26/arg26.css">
+    <link rel="stylesheet" href="top.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>電気通信工学研究会</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+</head>
+
+<body class="">
+    <div class="page-wrap">
+        <div class="header">
+            <div class="header-top">
+                <img src="/arg26/picture/dtk-logo.png">
+                <div class="search-box-dummy"></div>
+                <div class="search-box"><input type="text" placeholder="サイト内を検索" id="search-input"><button
+                        id="searchBtn"><span class="material-symbols-outlined"
+                            style="font-size: 20px;">search</span></button></div>
+            </div>
+            <div class="header-bottom">
+                <div class="scroll-hint-pill">
+                    <span>Scroll</span>
+                    <span class="arrow">→</span>
+                </div>
+                <ul>
+                    <li><a href="/arg26/">電気通信工学研究会とは</a></li>
+                    <hr>
+                    <li><a href="/arg26/activity/">活動について</a></li>
+                    <hr>
+                    <li><a href="/arg26/blog/">ブログ</a></li>
+                    <hr>
+                    <li><a href="/arg26/members">メンバー紹介</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="top-wrap">
+                <div class="top-title-box">
+                    <div class="title-den"></div>
+                    <div class="title-dtk">電気通信工学研究会</div>
+                    <div class="title-tsu"></div>
+                </div>
+            </div>
+            <div class="top-desc">
+                <div>ゲーム制作やWeb開発、ロボット制作をはじめとした</div>
+                <div>ソフト・ハードの様々な<span></div><div></span>モノづくりを行うサークルです！</div>
+                <div class="top-dentsu">
+                <div>
+                    <div><img class="top-dt-img" src="picture/den.png"></div>
+                    <div><b>▲でん</b></div>
+                </div>
+                <div>
+                    <div><img class="top-dt-img" src="picture/tsu.png"></div>
+                    <div><b>▲つー</b></div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div>
+            <div class="prog">1/30</div>
+            <div class="footer">
+                <div class="footer-bottom">
+                    <div class="footer-bottom-title">電気通信工学研究会</div>
+                    <div class="footer-bottom-inside">
+                        <div><b>お問い合わせ</b></div>
+                        <ul>
+                            <li>Twitt00r</li>
+                            <li>FaceB00k</li>
+                        </ul>
+                    </div>
+                    <div class="footer-bottom-inside">
+                        <div><b>連絡先</b></div>
+                        <ul>
+                            <li>kuclubdtk★gmail.com<br>（★＝＠）</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                </div>
+                <div class="footer-notice">このWebサイトの内容はフィクションであり、実在の人物・団体とは一切関係がありません。</div>
+                <div class="footer-credit">
+                    製作：<a href="/" target="_blank">電気通信工学研究会</a>　ARG部
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jquery scripts q-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="/arg26/search.js"></script>
+    <script>
+        // Search Script
+        $(function () {
+            var $searchBox = $('.search-box');
+            var $dummy = $(".search-box-dummy");
+            var stickyOffset = $searchBox.offset().top;
+
+            $(window).on('scroll', function () {
+                var scrollPos = $(this).scrollTop();
+
+                if (scrollPos > stickyOffset) {
+                    $searchBox.addClass('is-fixed');
+                    $dummy.show();
+                } else {
+                    $searchBox.removeClass('is-fixed');
+                    $dummy.hide();
+                }
+            });
+        });
+    </script>
+    <!--
+    <script>
+        $(document).ready(async function () {
+            searchWord = getParameterByName("search");
+            $("#search-word").text(searchWord);
+            $("#search-input").val(searchWord);
+            resultJson = await searchJsonByKeyword(searchWord);
+            var searchHtml = "";
+            if (!resultJson) {
+                $("#results-field").html("<div class='result-article'>検索結果が見つかりません...</div>");
+            } else {
+                var searchHtml = "";
+                searchHtml += "<div class='result-article'><div class='main'><a href='" + resultJson.main.link + "'>" + resultJson.main.title + "</a></div><div class='search-desc'>" + resultJson.main.date + " - " + resultJson.main.desc + "</div></div>";
+                $.each(resultJson.sub, function(index, val){
+                    searchHtml += "<div class = 'result-article'><div class='dummy'>" + val.title + "</div><div class='search-desc'>"  + val.date + " - " + val.desc +"</div></div>";
+                });
+                $("#results-field").html(searchHtml);
+            }
+        })
+    </script>
+    -->
+</body>
+
+</html>

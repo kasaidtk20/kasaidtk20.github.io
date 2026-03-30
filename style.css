@@ -39,6 +39,93 @@ a {
     font-size: 17px;
 }
 
+.twitter-tweet {
+    max-width: 440px !important;
+}
+
+.content-wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 5px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.content-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 30px 20px 0;
+    border-left: 4px solid #555;
+    padding: 16px 18px;
+    background-color: #fff;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+.content-title-big {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0;
+    border-left: 4px solid #555;
+    padding: 16px 18px;
+    background-color: #fff;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    max-width: 960px;
+}
+
+.content-desc {
+    padding: 0 20px;
+}
+
+.closed-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    background-color: rgba(128, 128, 128, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.content-img {
+    width: 100%;
+    max-width: 440px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.big-button {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.big-button a {
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    background-color: #000;
+    padding: 10px 70px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+/* 終了バナー */
+.closed-banner {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3));
+}
+
 /* PCで非表示用クラス */
 .pc-hidden {
     display: none;
@@ -65,13 +152,10 @@ a {
     width: 60px;
     height: 60px;
     background-color: rgba(255, 255, 255, 0.2);
-    /* 白の半透明 */
     backdrop-filter: blur(4px);
-    /* 背景をぼかすとおしゃれ */
     border: 1.5px solid #fff;
     border-radius: 50%;
     pointer-events: none;
-    /* クリックを画像に透過させる */
     z-index: 10;
     transition: all 0.3s ease;
 }
@@ -251,6 +335,19 @@ a {
     color: var(--section-font-color);
 }
 
+.sec-header-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sec-header-img img {
+    max-width: 960px;
+    margin: 5px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
 /* セクションタイトル用クラス群 終わり*/
 
 /* スクロールに合わせてフェードインするアニメーション用クラス */
@@ -398,10 +495,10 @@ a {
     z-index: 40;
     text-align: left;
     border: 2px solid #000000;
-    color:var(--main-font-color);
+    color: var(--main-font-color);
 }
 
-.menubar_inner div{
+.menubar_inner div {
     padding: 19px 12px;
 }
 
@@ -469,7 +566,7 @@ a {
         border: 2px solid #0070d1;
     }
 
-    .menubar span{
+    .menubar span {
         background: #fff;
     }
 }

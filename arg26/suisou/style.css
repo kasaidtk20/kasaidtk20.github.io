@@ -1,0 +1,243 @@
+@font-face {
+    font-family: "MaruMonica";
+    src: url("/arg26/fonts/x12y16pxMaruMonica.ttf") format("truetype");
+    font-display: block;
+}
+
+html,
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: "MaruMonica", sans-serif;
+}
+
+input::placeholder {
+    font-family: "Noto Sans JP", sans-serif;
+    color: #999;
+}
+
+.suisou-wrap {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.suisou-title {
+    font-size: 40px;
+}
+
+.program-box {
+    width: 80vw;
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #262626;
+}
+
+.input-space {
+    margin-top: 20px;
+}
+
+.input-box {
+    border: 1px solid #333;
+    background-color: white;
+    max-width: 600px;
+    width: 300px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+.input-box input {
+    border: none;
+    outline: none;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 20px;
+    width: 100%;
+}
+
+.purple {
+    color: #c586c0;
+}
+
+.orange {
+    color: #ce9178;
+}
+
+.blue {
+    color: #559cd6;
+}
+
+.green {
+    color: #699955;
+}
+
+.cursor-space {
+    position: relative;
+}
+
+.cursor {
+    position: absolute;
+    top: 1px;
+}
+
+@media screen and (max-width: 600px) {
+    .search-header {
+        margin-left: 0px;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    10% {
+        transform: translate(-2px, -1px);
+    }
+
+    20% {
+        transform: translate(-3px, 0px);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(0deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(0deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(0deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(0deg);
+    }
+}
+
+/* アニメーションを適用するクラス */
+.shake-active {
+    animation: shake 0.5s;
+    /* 0.5秒間実行 */
+    animation-iteration-count: 1;
+    /* 1回だけ実行 */
+}
+
+/* ローダー関連クラス */
+.loaderbg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation: load7 1.8s infinite ease-in-out;
+    animation: load7 1.8s infinite ease-in-out;
+}
+
+.loader {
+    color: #fff;
+    font-size: 10px;
+    margin: 80px auto;
+    position: relative;
+    text-indent: -9999em;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+.loader:before,
+.loader:after {
+    content: '';
+    position: absolute;
+    top: 0;
+}
+
+.loader:before {
+    left: -3.5em;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.loader:after {
+    left: 3.5em;
+}
+
+@-webkit-keyframes load7 {
+
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 2.5em 0 -1.3em;
+    }
+
+    40% {
+        box-shadow: 0 2.5em 0 0;
+    }
+}
+
+@keyframes load7 {
+
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 2.5em 0 -1.3em;
+    }
+
+    40% {
+        box-shadow: 0 2.5em 0 0;
+    }
+}
+
+.unity-log-row {
+    background-color: #000;
+    transition: background-color 0.3s;
+}
+
+.loaderbg{
+    font-size: 20px;
+}
+
+
+.dud {
+    color: #6a9955;
+    opacity: 0.7;
+}

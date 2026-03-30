@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>ページ内検索 - 電気通信工学研究会</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+</head>
+
+<body>
+    <div class="search-header">
+        <img src="/arg26/picture/den.png">
+        <div class="search-box"><input type="text" placeholder="サイト内を検索" id="search-input"><button id="searchBtn"><span
+                    class="material-symbols-outlined" style="font-size: 20px;">search</span></button></div>
+    </div>
+    <div class="search-wrap">
+
+        <div class="search">
+            <div class="search-title">「<span id="search-word"></span>」の検索結果</div>
+            <div id="results-field"></div>
+            <hr>
+            <a href="/arg26">トップページに戻る＞</a>
+        </div>
+    </div>
+    <!-- jquery scripts q-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="/arg26/search.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        $(document).ready(async function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchWord = urlParams.get("search") || "";
+
+            $("#search-word").text(searchWord);
+            $("#search-input").val(searchWord);
+
+            const resultJson = await searchJsonByKeyword(searchWord);
+            const $resultsField = $("#results-field");
+            $resultsField.empty();
+
+            function getHighlightedHtml(text, keyword) {
+                if (!text) return "";
+                if (!keyword) return $("<div>").text(text).html();
+
+                let escaped = $("<div>").text(text).html();
+
+                const escapedKeyword = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+                const regex = new RegExp(`(${escapedKeyword})`, "gi");
+                return escaped.replace(regex, "<b>$1</b>");
+            }
+
+            if (!resultJson) {
+                $resultsField.append($("<div>", { class: "result-article", text: "検索結果が見つかりません..." }));
+            } else {
+                const $mainArticle = $("<div>", { class: "result-article" });
+                const $mainDiv = $("<div>", { class: "main" });
+
+                const $mainLink = $("<a>", { href: resultJson.main.link });
+                $mainLink.html(getHighlightedHtml(resultJson.main.title, searchWord));
+
+                const $mainDesc = $("<div>", { class: "search-desc" });
+                $mainDesc.html(
+                    getHighlightedHtml(`${resultJson.main.date} - ${resultJson.main.desc}`, searchWord)
+                );
+
+                $mainDiv.append($mainLink);
+                $mainArticle.append($mainDiv).append($mainDesc);
+                $resultsField.append($mainArticle);
+
+                $.each(resultJson.sub, function (index, val) {
+                    const $subArticle = $("<div>", { class: "result-article" });
+
+                    const $subTitle = $("<div>", { class: "dummy" });
+                    $subTitle.html(getHighlightedHtml(val.title, searchWord));
+
+                    const $subDesc = $("<div>", { class: "search-desc" });
+                    $subDesc.html(
+                        getHighlightedHtml(`${val.date} - ${val.desc}`, searchWord)
+                    );
+
+                    $subArticle.append($subTitle).append($subDesc);
+                    $resultsField.append($subArticle);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

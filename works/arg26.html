@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="ja">
-<!-- devtoolを覗く習慣のある貴方は多分電通研に向いている! -->
-<!-- 是非加入してこのページとコードを修正して頂きたい... -->
 
 <head>
     <meta charset="utf-8">
@@ -10,11 +8,13 @@
     <!-- サムネイル画像 -->
     <meta property="og:image" content="picture/サムネイル.png">
     <link rel="icon" href="picture/dtk_icon.png" type="image/png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:image" content="/picture/propro_img.png" />
     <!-- サイトタイトル・説明 -->
-    <title>サイトアーカイブ - 関西大学 電気通信工学研究会</title>
-    <meta name="description" content="関西大学理系サークル電気通信工学研究会の公式webサイト。電気通信工学研究会での活動、制作物、イベント等について紹介しています。">
+    <title>プロトタイプ・プロジェクト - 関西大学 電気通信工学研究会</title>
+    <meta name="description" content="ARG「プロトタイプ・プロジェクト」">
     <!-- css -->
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="icon" href="../picture/dtk_icon.png" type="image/png">
     <!-- slick css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
@@ -57,38 +57,38 @@
                 </div>
             </div>
             <div id="menubar_inner" class="menubar_inner">
-                <div class="menubar_inner_border"><a href="/">トップページ</a></div>
+                <div><a href="/">トップページ</a></div>
+                <div class="menubar_inner_border"><a href="/works/arg26.html">ゲーム</a></div>
                 <div><a href="/archive">サイトアーカイブ</a></div>
             </div>
             <div class="menu-overlay"></div>
         </div>
         <div class="section-header">
-            <div class="bg-text">ARCHIVES</div>
-            <h2 class="header-title type">サイトアーカイブ</h2>
+            <div class="bg-text">ProtoType_Project</div>
+            <h2 class="header-title type" style="font-size: calc(1.25vw + 1.4rem);">プロトタイプ・プロジェクト</h2>
         </div>
-        <div class="header-sub-text fade-up">
-            <span class="background-linear">電通研が過去公開したWebサイト</span><br>
+        <div class="sec-header-img"><img src="/picture/propro_img.png"></div>
+        <div class="header-sub-text fade-up" style="max-width: 960px;">
+            <span class="background-linear">突然見つかった、10年以上前の電通研のウェブサイト。<br>そこには中止になった幻のプロジェクトの存在が...</span><br><br>
+            <span class="background-linear">プロジェクトは何故中止になったのか？<br>貴方の手で、止まってしまったプロジェクトの真実を解き明かしてください。</span>
         </div>
-        <br>
-        <div style="padding:5px;"><div class="box fade-up">
-            <h3><a href="https://dtk-creativestudio.github.io/kudtk.github.io/index.html#dtktoha"  target="_blank">関西大学 電気通信工学研究会(旧サイト)</a></h3>
-            <div>電通研の旧サイト。公式キャラクターの「でん」と「つー」は要チェックです。</div>
-        </div>
-        <br>
-        <div class="box fade-up">
-            <h3><a href="http://kuclubdtk.hateblo.jp"  target="_blank">電気通信工学研究会公式ブログ</a></h3>
-            <div>電通研の公式ブログです。制作物紹介やノウハウの共有など。</div>
+        <div class="big-button">
+            <a style="background-color: red;" target="_blank" href="/arg26/blog/">
+                <div>プレイ開始！</div>
+            </a>
         </div>
         <br>
-        <div class="box fade-up">
-            <h3><a href="https://kudtk844412490.wordpress.com"  target="_blank">電気通信工学研究会 – Welcome to The DTK LAB !</a></h3>
-            <div>2020年,2021年は新型コロナウイルスの影響で学園祭がオンライン開催に。<br>その際に公開されたウェブサイトです。</div>
+        <div>
+            <div class="content-wrap">
+                <div class="content-title-big">遊び方</div>
+                <div class="content-desc">
+                    <p>・サークルのサイトを模した<b>ホームページ内を探索する事でストーリーを読み進めていくゲーム</b>（ARG）です。</p>
+                    <p>・気になる単語をページ上部の検索ボックスに入力してみましょう。ワードによっては<b>新しいページ</b>がヒットします。</p>
+                    <p>・検索ワードは基本的に１語です。</p>
+                    <p>・ページ下部の数字は物語の進捗度を示しています。決してこの数字通りに読み進める必要はありませんが、詰まった時は参考にしてみると良いかもしれません。</p>
+                </div>
+            </div>
         </div>
-        <br>
-        <div class="box fade-up">
-            <h3><a href="https://kasaidtk20.github.io/legacy/"  target="_blank">関西大学 電気通信工学研究会（旧デザイン）</a></h3>
-            <div>当ページ(https://kasaidtk20.github.io)の旧デザインになります。</div>
-        </div></div>
         <div class="footer">
             <div class="footer-note">※本ページは当団体が自主的に制作・運営しているものです。<br>内容に関するお問い合わせは、当団体までお寄せください。</div>
             <div><a href="https://kasaidtk20.github.io">&copy;電気通信工学研究会</a></div>
@@ -112,7 +112,7 @@
     <!-- フルカレンダー(未使用)
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.20/index.global.min.js"></script>
     -->
-    <script src="main.js"></script>
+    <script src="/main.js"></script>
     <script>
         //ロード画面実装部分
         $(function () {
