@@ -88,3 +88,9 @@ body{
     text-decoration: underline;
     color: #333;
 }
+
+@media screen and (max-width: 600px) {
+    .search-wrap{
+        margin: 0;
+    }
+}

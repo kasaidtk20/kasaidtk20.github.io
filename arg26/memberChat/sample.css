@@ -138,6 +138,12 @@
     }
 }
 
+@media screen and (max-width: 600px) {
+    .chats-container{
+        margin: 0;
+    }
+}
+
 @-webkit-keyframes animation {
     0% {
         margin-top: 0;
