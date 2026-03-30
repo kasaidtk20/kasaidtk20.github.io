@@ -9,7 +9,7 @@ async function verifyKeyword(input, correctHash) {
   return hashHex === correctHash;
 }
 
-const TARGET_HASH = "1f17362ab6b42b0240285887a0e9e5c392332e1c8d582fec35fbe6c28cd0454c";
+const TARGET_HASH = "14ebe56a5008e7c251101e9e1fdbe281ab0a82bd6fa00a5cef746b9ee0dd31d1";
 
 async function onCheckButtonClick() {
   const userInput = $("#awnser-input").val();

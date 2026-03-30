@@ -48,4 +48,5 @@ async function displayChats() {
         chatF.append($chatItem);
         $chatItem.fadeIn(300);
     }
+    $("#end").fadeIn(500);
 }

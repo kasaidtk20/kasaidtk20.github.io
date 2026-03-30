@@ -3,7 +3,7 @@
         {
             "id": "0",
             "name": "電通研",
-            "icon": "/arg26/picture/dtk_icon.png"
+            "icon": "/arg26/picture/dtk_icon.jpg"
         },
         {
             "id": "1",
@@ -207,11 +207,6 @@
             "user":"1",
             "waittime": "4000",
             "message":"すいそうを完成させてくれて、本当の本当にありがとうございます！！"
-        },
-        {
-            "user":"0",
-            "waittime": "3000",
-            "message":"あなたのおかげですいそうのゲーム制作プロジェクトは完成にまで至りました。"
         }
     ]
 }
