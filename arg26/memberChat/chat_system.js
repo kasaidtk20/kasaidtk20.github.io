@@ -40,7 +40,7 @@ async function displayChats() {
         const $chatItem = $(`<div class="chat-wrap">
                 <div class="chat-icon"><img src="` + member.icon + `"></div>
                 <div>
-                    <div class="chat-user"><a href="/arg26">`+ member.name + `</a> : <span class="chat-date">` + y + "/" + m + "/" + d + " " + h + ":" + mi + ":" + s + `</span>&nbsp;&nbsp;&nbsp;<span class="mobile-only"><br></span>ID : ` + member.chat_id + `</div>
+                    <div class="chat-user"><span style="color:blue; text-decoration:underline;">`+ member.name + `</span> : <span class="chat-date">` + y + "/" + m + "/" + d + " " + h + ":" + mi + ":" + s + `</span>&nbsp;&nbsp;&nbsp;<span class="mobile-only"><br></span><span style="color:gray;">ID : ` + member.chat_id + `</span></div>
                     <div class="bubble left">`+ val.message +
             `</div>
                 </div>
