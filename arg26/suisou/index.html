@@ -17,23 +17,17 @@
 <body>
     <div class="loaderbg">
         <div id="logs" data-value="「すいそう」が完成しました">
-            <div class="unity-log-row"
-                data-value="Initialize engine version: 2026.04.01Thx">
+            <div class="unity-log-row" data-value="Initialize engine version: 2026.04.01Thx">
             </div>
-            <div class="unity-log-row"
-                data-value="Building Player...">
+            <div class="unity-log-row" data-value="Building Player...">
             </div>
-            <div class="unity-log-row"
-                data-value="Compiling scripts...">
+            <div class="unity-log-row" data-value="Compiling scripts...">
             </div>
-            <div class="unity-log-row"
-                data-value="now Checking...">
+            <div class="unity-log-row" data-value="now Checking...">
             </div>
-            <div class="unity-log-row"
-                data-value=">> All OK!">
+            <div class="unity-log-row" data-value=">> All OK!">
             </div>
-            <div class="unity-log-row"
-                data-value="Build Complete!!">
+            <div class="unity-log-row" data-value="Build Complete!!">
             </div>
         </div>
     </div>
@@ -49,16 +43,43 @@
             <div style="margin-left: 15px;">
                 <div><span class="purple">public</span> <span class="blue">int</span> bugCount = <span
                         class="orange">95</span>;</div>
-                <div><span class="purple">public</span> <span class="blue">bool</span> isCoffeEmpty = <span
-                        class="orange">true</span>;</div>
+                <div><span class="purple">public</span> <span class="blue">enum</span> GameState</div>
+                <div>{</div>
+                <div style="margin-left: 15px;">
+                    <div>All_OK,</div>
+                    <div>TooMuchBug</div>
+                </div>
+                <div>}</div>
+                <div><span class="purple">public</span> <span class="blue">GameState</span> gameState;</div>
                 <div>&nbsp;</div>
                 <div><span class="purple">void</span> <span class="orange">Start</span>()</div>
                 <div>{</div>
                 <div style="margin-left: 15px;">
-                    <div>Debug.Log(<span class="green">'テスト'</span>);</div>
                     <div>&nbsp;</div>
                     <div>[<span id="input-text">ココに入力</span><span class="cursor-space"><span class="cursor"
                                 id="wait">|</span></span> ]</div>
+                    <div>&nbsp;</div>
+                    <div><span class="purple">while</span>(!BugFinder())</div>
+                    <div>{</div>
+                    <div style="margin-left: 15px;">
+                        <div>Debug.Log(<span class="green">"error : TooMuchBug"</span>)</div>
+                    </div>
+                    <div>}</div>
+                </div>
+                <div>}</div>
+                <div>&nbsp;</div>
+                <div><span class="purple">bool</span> <span class="orange">BugFinder</span>()</div>
+                <div>{</div>
+                <div style="margin-left: 15px;">
+                    <div>bugCount = getRecentBugs();</div>
+                    <div><span></span></div>
+                    <div><span class="purple">if</span>(bugCount != 0)</div>
+                    <div>{</div>
+                    <div style="margin-left: 15px;">
+                        <div><span class="purple">return</span> false;</div>
+                    </div>
+                    <div>}</div>
+                    <div><span class="purple">return</span> true;</div>
                 </div>
                 <div>}</div>
             </div>
