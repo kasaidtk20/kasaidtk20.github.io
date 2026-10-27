@@ -1,0 +1,384 @@
+@font-face {
+    font-family: "Best10Font"; /* 自分で付ける名前 */
+    src: url("/arg_2026/fonts/BestTen-CRT.otf") format("opentype"); /* フォントファイルのパスと形式 */
+    font-display: swap;
+}
+
+
+:root {
+    --main-bg-color: #2e2e2e;
+    --main-font-color: #666666;
+    --linear-color: #ffeb3b;
+    --section-accent-color: #e2e8f0;
+    --footer-bg-color: #e2e8f0;
+    --section-font-color: #4a453e;
+
+    --header-height: 100px;
+    --nav-height: 70px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: clamp(2rem, 1.5rem + 2vw, 4rem);
+}
+
+.text {
+    width: 100%;
+    font-size: clamp(1rem, .8rem + 1vw, 2.5rem);
+    padding: .625rem;
+    line-height: 1.8;
+}
+
+.sub-title {
+    font-size: clamp(1.5rem, 1rem + 1.5vw, 3.25rem);
+}
+
+html,
+body {
+    position: relative;
+    color: #2e2e2e;
+    word-break: break-word;
+    margin: 0;
+    padding: 0;
+    font-family:  "HGS教科書体", sans-serif;
+    scroll-behavior: smooth;
+    min-height: 100svh;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* 画面全体を覆う */
+
+    background-image: url("../../picture/paper.jpg");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: repeat-y;
+    opacity: 0.25;            /* 質感の濃さ */
+    pointer-events: none;     /* リンクなどの操作を妨げない */
+    mix-blend-mode: multiply;  /* 背景と混ぜる */
+    z-index: -1;                   /* 背景の後ろに配置 */
+}
+
+body {
+    background-position: center top;
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-color: #ece7ed;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.window_wrapper {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    z-index: 100;
+    color: #f9f9fb;
+    font-weight: bold;
+    line-height: 1.2;
+    border-bottom: solid #993366 10px;
+}
+
+.header-logo {
+    margin-right: 5px;
+}
+
+.header img {
+    height: 40px;
+}
+
+.header a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+}
+
+.header-in {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem 0;
+    padding: .5rem;
+    background-color: #761c1c;
+}
+
+.header-in > *+*{
+    border-left: 3px solid #A85B6E;
+}
+
+.header-lit {
+    font-size: clamp(1rem, .8rem + .7vw, 1.5rem);
+    padding: .75rem clamp(.5rem, 1.5vw, 1.5rem);
+    line-height: 1.5;
+}
+
+
+.header-big {
+    font-size: clamp(1.75rem, 1rem + 2vw, 3rem);
+    padding: .5rem clamp(.5rem, 1.5vw, 1.5rem);
+    line-height: 1.2;
+    color: #fff;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    flex: 1 1 18rem;
+    min-width: 0;
+    max-width: 36rem;
+    margin-left: auto;
+    padding: .5rem;
+    gap: .5rem;
+}
+
+.search-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 24px;
+    border-radius: 5px 5px 5px 5px; /* 下側だけ丸くする */
+    border: 2px solid;
+    border-top-color: white;
+    border-left-color: white;
+    border-bottom-color: black;
+    border-right-color: black;
+}
+
+.search-form button {
+    flex-shrink: 0;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 8px 24px;
+    border-radius: 5px 5px 5px 5px; /* 下側だけ丸くする */
+    border: 2px solid;
+    border-top-color: white;
+    border-left-color: white;
+    border-bottom-color: black;
+    border-right-color: black;
+}
+
+.top {
+    
+    position: relative;
+    margin-bottom: 0px;
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    box-sizing: border-box;
+}
+
+.top-main {
+    width: 100%;
+    min-height: clamp(24rem, 45vw, 50rem);
+    padding: clamp(2rem, 6vw, 6rem) max(1rem, calc((100% - 90rem) / 2));
+    background-image: linear-gradient(to right, #f5f5f500 0%, #ece7ed 80%, #ece7ed 100%),
+        url("/arg_2026/picture/memorial-mainback.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.top-main  img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 2.2/1;
+    object-fit: cover;
+    object-position: center;
+}
+
+.main-big {
+    width: 55%;
+    margin-left: auto;
+    padding-left: clamp(1rem, 3vw, 4rem);
+    font-size: clamp(2rem, 1rem + 3.5vw, 5.375rem);
+    line-height: 1.4;
+    color: #000;
+}
+
+.main-big u{
+    text-decoration-thickness: 3px;
+}
+
+.main-lit {
+    width: 55%;
+    margin-left: auto;
+    padding-top: clamp(1.5rem, 4vw, 6rem);
+    padding-left: clamp(1rem, 3vw, 4rem);
+    color: #000;
+    font-size: clamp(1.125rem, .75rem + 1.5vw, 3rem);
+    letter-spacing: .1em;
+    line-height: 1.5;
+}
+
+
+.top-sub {
+    padding: clamp(2rem, 5vw, 4rem) 1rem;
+    text-align: center;
+}
+
+
+.explain {
+    width: calc(100% - 2rem);
+    max-width: 75rem;
+    margin-inline: auto;
+    padding-block: clamp(2rem, 5vw, 4rem);
+}
+
+.news {
+    width: calc(100% - 2rem);
+    max-width: 75rem;
+    margin-inline: auto;
+    padding-block: clamp(2rem, 5vw, 4rem);
+}
+
+.news-text {
+    width: 100%;
+    font-size: clamp(1rem, .8rem + 1vw, 2.5rem);
+    border-block: 2px solid #bcbcbc;
+    padding: .625rem;
+    background-color: #ffffff66;
+    line-height: 1.8;
+}
+
+
+.access {
+    width: calc(100% - 2rem);
+    max-width: 75rem;
+    margin-inline: auto;
+    padding-block: clamp(2rem, 5vw, 4rem);
+}
+
+.map{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    overflow: hidden;
+
+    filter: drop-shadow(14px 6px 5px rgba(0, 0, 0, 0.3));
+}
+
+.search-wrap{
+    margin:30px;
+}
+
+.search-box {
+    border: 1px solid #333;
+    background-color: white;
+    width: 100%;
+    max-width: 600px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+::placeholder {
+    font-family: "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+
+.search-box input{
+    border: none;
+    outline: none;
+    font-family: "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    font-size: 20px;
+    width: 100%;
+}
+
+.search-box button {
+    border: none;
+    background-color: inherit;
+}
+
+.search{
+    margin: 30px;
+}
+.search-title{
+    font-size: 30px;
+    margin: 20px;
+}
+#search-word{
+    font-weight: bold;
+}
+
+/* ページフッター用クラス群 */
+.footer {
+    background-color: var(--footer-bg-color);
+    color: #777 !important;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    gap: 15px;
+
+    margin-top: auto; /* 余った空間を上側に入れて最下部へ押し下げる */
+
+}
+
+.footer-note {
+    font-size: 0.8em;
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+/* ページフッター用クラス群 終わり*/
+
+.header-in > * {
+    min-width: 0;
+}
+
+.search-form input {
+    width: 100%;
+    min-width: 0;
+    padding-inline: .75rem;
+}
+
+.search-form button {
+    padding-inline: .75rem;
+}
+
+[id] {
+    scroll-margin-top: 1rem;
+}
+
+@media (max-width: 899px) {
+    .search-form {
+        flex-basis: 100%;
+        max-width: none;
+        border-left: 0;
+    }
+}
+
+@media (max-width: 599px) {
+    .top-main {
+        background-image: linear-gradient(#ece7edbb, #ece7edee),
+            url("/arg_2026/picture/memorial-mainback.png");
+    }
+
+    .main-big,
+    .main-lit {
+        width: 100%;
+        padding-left: 0;
+    }
+}
