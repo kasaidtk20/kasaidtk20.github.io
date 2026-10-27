@@ -1,0 +1,114 @@
+/* Layout primitives shared by every ARG page. Component rules live in each theme. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 1rem;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+    overflow-wrap: anywhere;
+}
+
+/* Scale only page content; backgrounds, headers, banners and footers stay full size. */
+.page-content-scale {
+    width: 100vw;
+    zoom: 0.75;
+    margin-inline: auto;
+}
+
+.main_div > .page-content-scale {
+    width: min(98vw, 98rem);
+}
+
+/* Extend only the purple background without resizing the collaboration content. */
+.page-content-scale .collabo {
+    box-shadow: 0 0 0 100vmax #ece7ed;
+    clip-path: inset(0 -100vmax);
+}
+
+.page-content-scale .collabo::before {
+    left: 50%;
+    right: auto;
+    width: calc(100vw / 0.75);
+    transform: translateX(-50%);
+}
+
+/* Restore access headings to their original size within the scaled content. */
+.page-content-scale .access-title,
+.page-content-scale .access > .title {
+    zoom: calc(1 / 0.75);
+}
+
+.page-content-scale .access-title {
+    /* Match the 4px outline of other headings after their 75% scaling. */
+    -webkit-text-stroke-width: 3px;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+input[type="search"],
+input[type="text"] {
+    min-width: 0;
+    font-size: 1rem;
+}
+
+button,
+input[type="search"] {
+    min-height: 44px;
+}
+
+.window_wrapper,
+.header-in,
+.search-wrap,
+.search,
+.footer > * {
+    min-width: 0;
+}
+
+.search-wrap {
+    width: calc(100% - 2rem);
+    max-width: 72rem;
+    margin: clamp(1rem, 3vw, 2rem) auto;
+}
+
+.search {
+    margin: 0;
+}
+
+.search-title {
+    margin: 1rem 0;
+    font-size: clamp(1.25rem, 1rem + 1vw, 1.875rem);
+}
+
+.footer {
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+.footer .SNS-box,
+.footer .mail-box {
+    zoom: 0.75;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html,
+    body {
+        scroll-behavior: auto;
+    }
+}
