@@ -374,6 +374,7 @@ a {
     width: 100%;
     height: clamp(16rem, 50vw, 37.5rem);
     border-radius: 12px;
+    padding-bottom: 50px;
     overflow: hidden;
 }
 
